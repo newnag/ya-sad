@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YA-SAD</title>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"> -->
+  <link rel="stylesheet" href="/css/style.min.css">
+</head>
+<body>
+  <header>
+    <div class="header">
+      <div class="logo"><figure><a href=""><img src="/img/logo/logo-02.png" alt=""></a></figure></div>
+      <nav>
+        <div class="search">
+          <div class="input-search">
+            <input type="text" class="form-component input">
+            <img src="/img/svg/search.svg" class="icon-svg" alt="">
+          </div>
+        </div>
+
+        <div class="menu">
+          <ul>
+            <li class="active"><a href="">หน้าหลัก</a></li>
+            <li><a href="">บทความ</a></li>
+            <li><a href="">ติดต่อเรา</a></li>
+            <li><a href="">ยืนยันการชำระเงิน</a></li>
+          </ul>
+        </div>
+
+        <div class="cart">
+          <a href="">
+            <img src="/img/svg/bag-01.svg" class="icon-svg bag" alt="">
+            <div class="number-item"><span>3</span></div>
+          </a>
+        </div>
+
+        <div class="member">
+          <div class="member-button login"><a href=""><button class="form-component button">เข้าสู่ระบบ</button></a></div>
+          <div class="member-button register"><a href=""><button class="form-component button">สมัครสมาชิก</button></a></div>
+          <div class="account">
+            <div class="name-user" onclick="open_menu_account()">
+              <div class="name">
+                <span>ทศพล ชื่นมาลา</span>
+                <img src="/img/svg/down-arrow.svg" class="icon-svg" alt="">
+              </div>
+              <div class="class-user"><p>บุคคลทั่วไป</p></div>
+            </div>
+            <figure class="avatar" onclick="open_menu_account()"><img src="/img/avatar.jpg" alt=""></figure>
+
+            <ul class="menu-account">
+              <li><a href="">บัญชีของฉัน</a></li>
+              <li><a href="">ประวัติการซื้อ</a></li>
+              <li><a href="">ออกจากระบบ</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="close-mobile" onclick="close_mobile_menu()">X</div>
+      </nav>
+      <div class="hamburger" onclick="open_mobile_menu()">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+    </div>
+  </header>
+
+  <script src="/js/app.js"></script>
+</body>
+</html>
