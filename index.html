@@ -7,9 +7,11 @@
 
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 
   <!-- <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"> -->
   <link rel="stylesheet" href="/css/style.min.css">
+  <link rel="stylesheet" href="/css/home.min.css">
 </head>
 <body>
   <header>
@@ -70,6 +72,492 @@
     </div>
   </header>
 
+  <main>
+    <div class="main-content container">
+      <div class="aside">
+        <div class="aside-hamburger" onclick="open_aside_mobile()"><img src="/img/svg/right-arrow.svg" class="icon-svg" alt=""></div>
+
+        <div class="aside-nav">
+          <div class="menu">
+            <li class="syringe" onclick="open_subcate(this)">
+              <div class="name-cate">
+                <img src="/img/svg/syringe-02.svg" class="icon-svg" alt=""> ยาฉีด
+              </div>
+              <img src="/img/svg/angle-left-solid.svg" class="icon-svg"  alt="">
+
+              <ul>
+                <li><a href="">ยาฉีดทั้งหมด</a></li>
+                <li><a href="">ยาปฏิชีวนะ</a></li>
+                <li><a href="">NSAIDs</a></li>
+                <li><a href="">Steriod</a></li>
+                <li><a href="">วิตามิน แร่ธาตุ</a></li>
+                <li><a href="">ฮอร์โมน</a></li>
+              </ul>
+            </li>
+            <li class="pill" onclick="open_subcate(this)">
+                <div class="name-cate">
+                  <img src="/img/svg/pills-03.svg" class="icon-svg" alt=""> ยากิน
+                </div>
+              <img src="/img/svg/angle-left-solid.svg" class="icon-svg"  alt="">
+
+              <ul>
+                <li><a href="">ยากินทั้งหมด</a></li>
+                <li><a href="">ยาปฏิชีวนะ</a></li>
+                <li><a href="">NSAIDs</a></li>
+                <li><a href="">Steriod</a></li>
+                <li><a href="">วิตามิน แร่ธาตุ</a></li>
+                <li><a href="">ฮอร์โมน</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="">
+                <div class="name-cate">
+                  <img src="/img/svg/crem-04.svg" class="icon-svg" alt=""><span>ยาใช้ภายนอก</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <div class="name-cate">
+                  <img src="/img/svg/bacteria-05.svg" class="icon-svg" alt=""><span>ยาฆ่าเชื้อ</span> 
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <div class="name-cate">
+                  <img src="/img/svg/scalpel-06.svg" class="icon-svg" alt=""><span>อุปกรณ์ทางการแพทย์</span> 
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <div class="name-cate">
+                  <img src="/img/svg/other-07.svg" class="icon-svg" alt=""><span>อื่นๆ</span>
+                </div>
+              </a>
+            </li>
+          </div>
+
+          <div class="menu-animal">
+            <li>
+              <a href="">
+                <div class="name-cate">
+                  <img src="/img/svg/cat-09.svg" class="icon-svg" alt=""><span>สัตว์เลี้ยง</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <div class="name-cate">
+                  <img src="/img/svg/pig-10.svg" class="icon-svg" alt=""><span>สัตว์เศรษฐกิจ</span>
+                </div>
+              </a>
+            </li>
+          </div>
+
+          <div class="qrcode"><img src="/img/qr.png" alt=""></div>
+
+          <div class="button-social">
+            <div class="facebook"><button class="form-component button"><img src="/img/svg/facebook-square-brands.svg" class="icon-svg" alt=""> Like us on facebook</button></div>
+            <div class="line"><button class="form-component button"><img src="/img/svg/line.svg" class="icon-svg" alt=""> Add LINE friends</button></div>
+          </div>
+
+          <div class="button-slide-mobile" onclick="close_aside_mobile()"><img src="/img/svg/back-arrow.svg" class="icon-svg" alt=""></div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="head-slide swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="/img/slide1.jpg" alt="">
+              <div class="box-slider">
+                <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
+                <p>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                  Sunt doloremque omnis quas dolorum enim facilis non aspernatur quo laboriosam, ex,
+                </p>
+                <a href=""><button class="form-component button">ดูรายละเอียด</button></a>
+              </div>
+            </div>
+            
+            <div class="swiper-slide">
+              <img src="/img/slide1.jpg" alt="">
+              <div class="box-slider">
+                <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
+                <p>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                  Sunt doloremque omnis quas dolorum enim facilis non aspernatur quo laboriosam, ex,
+                </p>
+                <a href=""><button class="form-component button">ดูรายละเอียด</button></a>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <img src="/img/slide1.jpg" alt="">
+              <div class="box-slider">
+                <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
+                <p>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                  Sunt doloremque omnis quas dolorum enim facilis non aspernatur quo laboriosam, ex,
+                </p>
+                <a href=""><button class="form-component button">ดูรายละเอียด</button></a>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <img src="/img/slide1.jpg" alt="">
+              <div class="box-slider">
+                <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
+                <p>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                  Sunt doloremque omnis quas dolorum enim facilis non aspernatur quo laboriosam, ex,
+                </p>
+                <a href=""><button class="form-component button">ดูรายละเอียด</button></a>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <img src="/img/slide1.jpg" alt="">
+              <div class="box-slider">
+                <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
+                <p>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                  Sunt doloremque omnis quas dolorum enim facilis non aspernatur quo laboriosam, ex,
+                </p>
+                <a href=""><button class="form-component button">ดูรายละเอียด</button></a>
+              </div>
+            </div>
+          </div>
+          <!-- Add Pagination -->
+          <div class="swiper-pagination"></div>
+          <!-- Add Arrows -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+
+        <div class="home-sale">
+          <div class="title">
+            <h2>ผลิตภัณฑ์ (ลดราคา)</h2>
+          </div>
+
+          <div class="grid-box grid-sale">
+            <a href="">
+              <div class="box">
+                <div class="tag">
+                  <div class="sale"><span>SALE</span></div>
+                </div>
+                <figure><img src="/img/test1.jpg" alt=""></figure>
+                <div class="detail-zone">
+                  <div class="name"><p>ยารักษาสัตว์แบบกิน</p></div>
+                  <div class="exp"><p>EXP: 11/8/2099</p></div>
+                  <div class="price">
+                    <div class="old-price">฿ 980</div>
+                    <div class="now-price">฿ 700</div>
+                  </div>
+                </div>
+              </div>
+            </a>
+  
+            <a href="">
+              <div class="box">
+                <div class="tag">
+                  <div class="sale"><span>SALE</span></div>
+                </div>
+                <figure><img src="/img/test2.jpg" alt=""></figure>
+                <div class="detail-zone">
+                  <div class="name"><p>ยารักษาสัตว์แบบกิน มีอันตรายน้อย รสหวาน คนก็กินได้</p></div>
+                  <div class="exp"><p>EXP: 11/8/2099</p></div>
+                  <div class="price">
+                    <div class="old-price">฿ 98000</div>
+                    <div class="now-price">฿ 70000</div>
+                  </div>
+                </div>
+              </div>
+            </a>
+  
+            <a href="">
+              <div class="box">
+                <div class="tag">
+                  <div class="sale"><span>SALE</span></div>
+                </div>
+                <figure><img src="/img/test3.jpg" alt=""></figure>
+                <div class="detail-zone">
+                  <div class="name"><p>ยารักษาสัตว์แบบกิน</p></div>
+                  <div class="exp"><p>EXP: 11/8/2099</p></div>
+                  <div class="price">
+                    <div class="old-price">฿ 980</div>
+                    <div class="now-price">฿ 700</div>
+                  </div>
+                </div>
+              </div>
+            </a>
+  
+            <a href="">
+              <div class="box">
+                <div class="tag">
+                  <div class="sale"><span>SALE</span></div>
+                </div>
+                <figure><img src="/img/test6.jpg" alt=""></figure>
+                <div class="detail-zone">
+                  <div class="name"><p>ยารักษาสัตว์แบบฉีดเข้าทางท้อง</p></div>
+                  <div class="exp"><p>EXP: 11/8/2099</p></div>
+                  <div class="price">
+                    <div class="old-price">฿ 9180</div>
+                    <div class="now-price">฿ 7200</div>
+                  </div>
+                </div>
+              </div>
+            </a>
+  
+            <a href="">
+              <div class="box">
+                <div class="tag">
+                  <div class="sale"><span>SALE</span></div>
+                </div>
+                <figure><img src="/img/test3.jpg" alt=""></figure>
+                <div class="detail-zone">
+                  <div class="name"><p>ยารักษาสัตว์แบบกิน</p></div>
+                  <div class="exp"><p>EXP: 11/8/2099</p></div>
+                  <div class="price">
+                    <div class="old-price">฿ 980</div>
+                    <div class="now-price">฿ 700</div>
+                  </div>
+                </div>
+              </div>
+            </a>
+  
+            <a href="">
+              <div class="box">
+                <div class="tag">
+                  <div class="sale"><span>SALE</span></div>
+                </div>
+                <figure><img src="/img/test6.jpg" alt=""></figure>
+                <div class="detail-zone">
+                  <div class="name"><p>ยารักษาสัตว์แบบฉีดเข้าทางท้อง</p></div>
+                  <div class="exp"><p>EXP: 11/8/2099</p></div>
+                  <div class="price">
+                    <div class="old-price">฿ 9180</div>
+                    <div class="now-price">฿ 7200</div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        
+        <div class="article">
+          <div class="grid-article">
+            <div class="box">
+              <img src="/img/article1.jpg" alt="">
+              <div class="detail">
+                <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
+                <p>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                  Sunt doloremque omnis quas dolorum enim facilis non aspernatur quo laboriosam, ex,
+                </p>
+                <a href=""><button class="form-component button">ดูรายละเอียด</button></a>
+              </div>
+            </div>
+
+            <div class="box">
+              <img src="/img/article2.jpg" alt="">
+              <div class="detail">
+                <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
+                <p>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                  Sunt doloremque omnis quas dolorum enim facilis non aspernatur quo laboriosam, ex,
+                </p>
+                <a href=""><button class="form-component button">ดูรายละเอียด</button></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="recomment">
+          <div class="title">
+            <h2>ผลิตภัณฑ์ (แนะนำ)</h2>
+          </div>
+
+          <div class="grid-box grid-recomment">
+            <a href="">
+              <div class="box">
+                <div class="tag">
+                  <div class="sale"><span>SALE</span></div>
+                </div>
+                <figure><img src="/img/test1.jpg" alt=""></figure>
+                <div class="detail-zone">
+                  <div class="name"><p>ยารักษาสัตว์แบบกิน</p></div>
+                  <div class="exp"><p>EXP: 11/8/2099</p></div>
+                  <div class="price">
+                    <div class="old-price">฿ 980</div>
+                    <div class="now-price">฿ 700</div>
+                  </div>
+                </div>
+              </div>
+            </a>
+  
+            <a href="">
+              <div class="box">
+                <div class="tag">
+                  <div class="sale"><span>SALE</span></div>
+                </div>
+                <figure><img src="/img/test2.jpg" alt=""></figure>
+                <div class="detail-zone">
+                  <div class="name"><p>ยารักษาสัตว์แบบกิน มีอันตรายน้อย รสหวาน คนก็กินได้</p></div>
+                  <div class="exp"><p>EXP: 11/8/2099</p></div>
+                  <div class="price">
+                    <div class="old-price">฿ 98000</div>
+                    <div class="now-price">฿ 70000</div>
+                  </div>
+                </div>
+              </div>
+            </a>
+  
+            <a href="">
+              <div class="box">
+                <div class="tag">
+                  <div class="sale"><span>SALE</span></div>
+                </div>
+                <figure><img src="/img/test3.jpg" alt=""></figure>
+                <div class="detail-zone">
+                  <div class="name"><p>ยารักษาสัตว์แบบกิน</p></div>
+                  <div class="exp"><p>EXP: 11/8/2099</p></div>
+                  <div class="price">
+                    <div class="old-price">฿ 980</div>
+                    <div class="now-price">฿ 700</div>
+                  </div>
+                </div>
+              </div>
+            </a>
+  
+            <a href="">
+              <div class="box">
+                <div class="tag">
+                  <div class="sale"><span>SALE</span></div>
+                </div>
+                <figure><img src="/img/test6.jpg" alt=""></figure>
+                <div class="detail-zone">
+                  <div class="name"><p>ยารักษาสัตว์แบบฉีดเข้าทางท้อง</p></div>
+                  <div class="exp"><p>EXP: 11/8/2099</p></div>
+                  <div class="price">
+                    <div class="old-price">฿ 9180</div>
+                    <div class="now-price">฿ 7200</div>
+                  </div>
+                </div>
+              </div>
+            </a>
+  
+            <a href="">
+              <div class="box">
+                <div class="tag">
+                  <div class="sale"><span>SALE</span></div>
+                </div>
+                <figure><img src="/img/test3.jpg" alt=""></figure>
+                <div class="detail-zone">
+                  <div class="name"><p>ยารักษาสัตว์แบบกิน</p></div>
+                  <div class="exp"><p>EXP: 11/8/2099</p></div>
+                  <div class="price">
+                    <div class="old-price">฿ 980</div>
+                    <div class="now-price">฿ 700</div>
+                  </div>
+                </div>
+              </div>
+            </a>
+  
+            <a href="">
+              <div class="box">
+                <div class="tag">
+                  <div class="sale"><span>SALE</span></div>
+                </div>
+                <figure><img src="/img/test6.jpg" alt=""></figure>
+                <div class="detail-zone">
+                  <div class="name"><p>ยารักษาสัตว์แบบฉีดเข้าทางท้อง</p></div>
+                  <div class="exp"><p>EXP: 11/8/2099</p></div>
+                  <div class="price">
+                    <div class="old-price">฿ 9180</div>
+                    <div class="now-price">฿ 7200</div>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a href="">
+              <div class="box">
+                <figure><img src="/img/test1.jpg" alt=""></figure>
+                <div class="detail-zone">
+                  <div class="name"><p>ยารักษาสัตว์แบบกิน</p></div>
+                  <div class="exp"><p>EXP: 11/8/2099</p></div>
+                  <div class="price">
+                    <div class="now-price">฿ 700</div>
+                  </div>
+                </div>
+              </div>
+            </a>
+  
+            <a href="">
+              <div class="box">
+                <figure><img src="/img/test2.jpg" alt=""></figure>
+                <div class="detail-zone">
+                  <div class="name"><p>ยารักษาสัตว์แบบฉีดเข้าทางท้อง</p></div>
+                  <div class="exp"><p>EXP: 11/8/2099</p></div>
+                  <div class="price">
+                    <div class="now-price">฿ 117200</div>
+                  </div>
+                </div>
+              </div>
+            </a>
+  
+            <a href="">
+              <div class="box">
+                <div class="tag">
+                  <div class="sale"><span>SALE</span></div>
+                </div>
+                <figure><img src="/img/test4.jpg" alt=""></figure>
+                <div class="detail-zone">
+                  <div class="name"><p>ยารักษาสัตว์แบบกิน</p></div>
+                  <div class="exp"><p>EXP: 11/8/2099</p></div>
+                  <div class="price">
+                    <div class="old-price">฿ 980</div>
+                    <div class="now-price">฿ 700</div>
+                  </div>
+                </div>
+              </div>
+            </a>
+  
+            <a href="">
+              <div class="box">
+                <figure><img src="/img/test5.jpg" alt=""></figure>
+                <div class="detail-zone">
+                  <div class="name"><p>ยารักษาสัตว์แบบฉีดเข้าทางท้อง</p></div>
+                  <div class="exp"><p>EXP: 11/8/2099</p></div>
+                  <div class="price">
+                    <div class="now-price">฿ 7200</div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="load-more">
+            <button class="form-component button">ดูเพิ่มเติม</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer">
+      <p>
+        สงวนสิทธิ์ &copy; 2565 <a href="https://www.wynnsoft-solution.com/">บริษัท วินซอฟโซลูชั่น จำกัด</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="/js/app.js"></script>
+  <script src="/js/home.js"></script>
 </body>
 </html>
