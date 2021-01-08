@@ -3,6 +3,12 @@
 .main-content{
   margin-top: 6em;
 
+  @media screen and (min-width:$lg){
+    display: grid;
+    grid-template-columns: 34% 65%;
+    grid-column-gap: 1%;
+  }
+
   .aside{
 
   }
@@ -18,6 +24,10 @@
             width: 100%;
             height: 180px;
             object-fit: cover;
+
+            @media screen and (min-width: $md) {
+              height: 260px;
+            }
           }
           .box-slider{
             position: absolute;
@@ -42,6 +52,7 @@
             button{
               margin-top: .5em;
               height: 25px;
+              background-color: $white;
             }
           }
         }
@@ -49,8 +60,12 @@
 
       .swiper-pagination{
         bottom: 0;
-        left: 18em;
+        left: 80%;
         width: max-content;
+
+        @media screen and (min-width: $md){
+          bottom: 10px;
+        }
       }
       .swiper-button-next{
         opacity: 1;

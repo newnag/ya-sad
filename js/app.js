@@ -20,7 +20,15 @@ function open_menu_account(){
 ///////////////////////////////////////////////////////////////////////
 // เปิดเมนูหมวดหมู่ย่อย
 function open_subcate(that){
-  that.querySelector('ul').classList.toggle('show')
+  if(that.querySelector('ul').classList.contains('show')){
+    that.querySelector('ul').classList.remove('show')
+  }
+  else{
+    document.querySelectorAll('.aside-nav .menu li ul').forEach(Ele=>{
+      Ele.classList.remove('show')
+    })
+    that.querySelector('ul').classList.toggle('show')
+  }
 }
 
 ///////////////////////////////////////////////////////////////////////
