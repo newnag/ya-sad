@@ -122,6 +122,7 @@ img {
 @media screen and (min-width: 1280px) {
   .container {
     max-width: 1280px;
+    margin: auto;
   }
 }
 
@@ -166,6 +167,20 @@ img {
   .grid-box {
     -ms-grid-columns: (1fr)[3];
         grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .grid-box {
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .grid-box {
+    -ms-grid-columns: (1fr)[6];
+        grid-template-columns: repeat(6, 1fr);
   }
 }
 
@@ -315,6 +330,12 @@ img {
   }
 }
 
+@media screen and (min-width: 1280px) {
+  .header nav .search {
+    width: 36%;
+  }
+}
+
 .header nav .search .input-search {
   position: relative;
   width: 70%;
@@ -346,6 +367,12 @@ img {
   }
 }
 
+@media screen and (min-width: 1280px) {
+  .header nav .menu {
+    width: 35%;
+  }
+}
+
 @media screen and (max-width: 1023px) {
   .header nav .menu ul {
     text-align: center;
@@ -369,6 +396,14 @@ img {
   }
   .header nav .menu ul li {
     margin-right: .5em;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .header nav .menu ul {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 
@@ -628,7 +663,7 @@ img {
   z-index: 10;
 }
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1024px) {
   .aside .aside-hamburger {
     display: none;
   }
@@ -814,19 +849,133 @@ img {
     width: 20px;
     height: 20px;
   }
-}
-
-@media screen and (max-width: 1023px) and (min-width: 1024px) {
-  .aside .aside-nav .button-slide-mobile {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 1023px) {
   .aside .aside-nav.show {
     left: 0%;
     -webkit-transition: .5s;
     transition: .5s;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .aside .aside-nav .menu, .aside .aside-nav .menu-animal {
+    padding-right: 2em;
+  }
+  .aside .aside-nav .menu .syringe, .aside .aside-nav .menu .pill, .aside .aside-nav .menu-animal .syringe, .aside .aside-nav .menu-animal .pill {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 2em 0;
+    cursor: pointer;
+    position: relative;
+  }
+  .aside .aside-nav .menu .syringe > .name-cate, .aside .aside-nav .menu .pill > .name-cate, .aside .aside-nav .menu-animal .syringe > .name-cate, .aside .aside-nav .menu-animal .pill > .name-cate {
+    width: 80px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .aside .aside-nav .menu .syringe > .name-cate img, .aside .aside-nav .menu .pill > .name-cate img, .aside .aside-nav .menu-animal .syringe > .name-cate img, .aside .aside-nav .menu-animal .pill > .name-cate img {
+    -webkit-filter: invert(1);
+            filter: invert(1);
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+  .aside .aside-nav .menu .syringe ul, .aside .aside-nav .menu .pill ul, .aside .aside-nav .menu-animal .syringe ul, .aside .aside-nav .menu-animal .pill ul {
+    max-width: 0;
+    width: 0;
+    position: absolute;
+    top: 0;
+    left: 110%;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+    background-color: #FF9B21;
+    z-index: 12;
+    overflow: hidden;
+    border-radius: 10px;
+    -webkit-transition: .5s;
+    transition: .5s;
+  }
+  .aside .aside-nav .menu .syringe ul li, .aside .aside-nav .menu .pill ul li, .aside .aside-nav .menu-animal .syringe ul li, .aside .aside-nav .menu-animal .pill ul li {
+    color: #FFF;
+    margin: 1em 0;
+    list-style-type: disc;
+    margin-left: 2em;
+  }
+  .aside .aside-nav .menu .syringe ul.show, .aside .aside-nav .menu .pill ul.show, .aside .aside-nav .menu-animal .syringe ul.show, .aside .aside-nav .menu-animal .pill ul.show {
+    max-width: 200px;
+    width: 150px;
+    -webkit-transition: .5s;
+    transition: .5s;
+  }
+  .aside .aside-nav .menu li, .aside .aside-nav .menu-animal li {
+    margin: 2em 0;
+  }
+  .aside .aside-nav .menu li a .name-cate, .aside .aside-nav .menu-animal li a .name-cate {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .aside .aside-nav .menu li a .name-cate img, .aside .aside-nav .menu-animal li a .name-cate img {
+    -webkit-filter: invert(1);
+            filter: invert(1);
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+  .aside .aside-nav .menu-animal {
+    margin: 2em 0;
+    padding: 1em 0;
+    border-top: 1px dashed #C4C4C4;
+    border-bottom: 1px dashed #C4C4C4;
+  }
+  .aside .aside-nav .menu-animal li {
+    margin-top: 1em;
+  }
+  .aside .aside-nav .qrcode {
+    text-align: center;
+  }
+  .aside .aside-nav .button-social {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 2em 0;
+  }
+  .aside .aside-nav .button-social .facebook, .aside .aside-nav .button-social .line {
+    width: 150px;
+    margin: .5em 0;
+  }
+  .aside .aside-nav .button-social .facebook button, .aside .aside-nav .button-social .line button {
+    width: 100%;
+  }
+  .aside .aside-nav .button-social .facebook button {
+    color: #3B5B95;
+  }
+  .aside .aside-nav .button-social .line button {
+    color: #00B900;
+  }
+  .aside .aside-nav .button-slide-mobile {
+    display: none;
   }
 }
 
