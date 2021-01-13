@@ -28,7 +28,7 @@ h2 {
 
 @media screen and (max-width: 639px) {
   h2 {
-    font-size: 1.47em;
+    font-size: 1.40em;
   }
 }
 
@@ -98,7 +98,7 @@ input:focus, button:focus {
 
 img {
   max-width: 100%;
-  max-height: 100%;
+  height: 100%;
 }
 
 .container {
@@ -266,6 +266,37 @@ img {
   padding: 0 5px;
 }
 
+.breadcrumb {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-height: 3.2em;
+  overflow: hidden;
+}
+
+.breadcrumb li {
+  margin-right: 5px;
+}
+
+.breadcrumb li:after {
+  content: '/';
+  color: #FF9B21;
+  margin-left: 3px;
+}
+
+.breadcrumb li:last-child:after {
+  content: '';
+}
+
+.breadcrumb li a {
+  color: #FF9B21;
+}
+
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -407,6 +438,14 @@ img {
   }
 }
 
+@media (hover: hover) {
+  .header nav .menu ul li:hover {
+    color: #FF9B21;
+    -webkit-transition: .3s;
+    transition: .3s;
+  }
+}
+
 .header nav .menu ul li.active {
   color: #FF9B21;
 }
@@ -497,6 +536,7 @@ img {
   grid-column-gap: 1%;
   width: 50%;
   position: relative;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 1024px) {
@@ -874,6 +914,16 @@ img {
     cursor: pointer;
     position: relative;
   }
+}
+
+@media screen and (min-width: 1024px) and (min-width: 1024px) {
+  .aside .aside-nav .menu .syringe, .aside .aside-nav .menu .pill, .aside .aside-nav .menu-animal .syringe, .aside .aside-nav .menu-animal .pill {
+    margin: unset;
+    padding: 1em 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
   .aside .aside-nav .menu .syringe > .name-cate, .aside .aside-nav .menu .pill > .name-cate, .aside .aside-nav .menu-animal .syringe > .name-cate, .aside .aside-nav .menu-animal .pill > .name-cate {
     width: 80px;
     display: -webkit-box;
@@ -918,10 +968,32 @@ img {
     -webkit-transition: .5s;
     transition: .5s;
   }
-  .aside .aside-nav .menu li, .aside .aside-nav .menu-animal li {
+}
+
+@media screen and (min-width: 1024px) and (hover: hover) {
+  .aside .aside-nav .menu .syringe:hover ul, .aside .aside-nav .menu .pill:hover ul, .aside .aside-nav .menu-animal .syringe:hover ul, .aside .aside-nav .menu-animal .pill:hover ul {
+    max-width: 200px;
+    width: 150px;
+    -webkit-transition: .5s;
+    transition: .5s;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .aside .aside-nav .menu > li, .aside .aside-nav .menu-animal > li {
     margin: 2em 0;
   }
-  .aside .aside-nav .menu li a .name-cate, .aside .aside-nav .menu-animal li a .name-cate {
+}
+
+@media screen and (min-width: 1024px) and (min-width: 1024px) {
+  .aside .aside-nav .menu > li, .aside .aside-nav .menu-animal > li {
+    margin: unset;
+    padding: 1em 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .aside .aside-nav .menu > li a .name-cate, .aside .aside-nav .menu-animal > li a .name-cate {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -929,12 +1001,17 @@ img {
         -ms-flex-align: center;
             align-items: center;
   }
-  .aside .aside-nav .menu li a .name-cate img, .aside .aside-nav .menu-animal li a .name-cate img {
+  .aside .aside-nav .menu > li a .name-cate img, .aside .aside-nav .menu-animal > li a .name-cate img {
     -webkit-filter: invert(1);
             filter: invert(1);
     width: 20px;
     height: 20px;
     margin-right: 10px;
+  }
+  .aside .aside-nav .menu > li.active, .aside .aside-nav .menu-animal > li.active {
+    background-color: #FF9B21;
+    color: #FFF;
+    border-radius: 5px;
   }
   .aside .aside-nav .menu-animal {
     margin: 2em 0;
@@ -965,6 +1042,15 @@ img {
     width: 150px;
     margin: .5em 0;
   }
+}
+
+@media screen and (min-width: 1024px) and (min-width: 1024px) {
+  .aside .aside-nav .button-social .facebook, .aside .aside-nav .button-social .line {
+    width: 180px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
   .aside .aside-nav .button-social .facebook button, .aside .aside-nav .button-social .line button {
     width: 100%;
   }

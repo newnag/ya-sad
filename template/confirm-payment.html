@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YA-SAD</title>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+  <!-- <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"> -->
+  <link rel="stylesheet" href="/css/style.min.css">
+  <link rel="stylesheet" href="/css/confirm.min.css">
+</head>
+<body>
+  <header>
+    <div class="header">
+      <div class="logo"><figure><a href=""><img src="/img/logo/logo-02.png" alt=""></a></figure></div>
+      <nav>
+        <div class="search">
+          <div class="input-search">
+            <input type="text" class="form-component input">
+            <img src="/img/svg/search.svg" class="icon-svg" alt="">
+          </div>
+        </div>
+
+        <div class="menu">
+          <ul>
+            <li class="active"><a href="">หน้าหลัก</a></li>
+            <li><a href="">บทความ</a></li>
+            <li><a href="">ติดต่อเรา</a></li>
+            <li><a href="">ยืนยันการชำระเงิน</a></li>
+          </ul>
+        </div>
+
+        <div class="cart">
+          <a href="">
+            <img src="/img/svg/bag-01.svg" class="icon-svg bag" alt="">
+            <div class="number-item"><span>3</span></div>
+          </a>
+        </div>
+
+        <div class="member">
+          <div class="member-button login"><a href=""><button class="form-component button">เข้าสู่ระบบ</button></a></div>
+          <div class="member-button register"><a href=""><button class="form-component button">สมัครสมาชิก</button></a></div>
+          <div class="account">
+            <div class="name-user" onclick="open_menu_account()">
+              <div class="name">
+                <span>ทศพล ชื่นมาลา</span>
+                <img src="/img/svg/down-arrow.svg" class="icon-svg" alt="">
+              </div>
+              <div class="class-user"><p>บุคคลทั่วไป</p></div>
+            </div>
+            <figure class="avatar" onclick="open_menu_account()"><img src="/img/avatar.jpg" alt=""></figure>
+
+            <ul class="menu-account">
+              <li><a href="">บัญชีของฉัน</a></li>
+              <li><a href="">ประวัติการซื้อ</a></li>
+              <li><a href="">ออกจากระบบ</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="close-mobile" onclick="close_mobile_menu()">X</div>
+      </nav>
+      <div class="hamburger" onclick="open_mobile_menu()">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="main-content container">
+      <div class="content">
+        <div class="confirm">
+          <div class="title">
+            <h1>ยืนยันการชำระเงิน</h1>
+            <p>
+              *กรุณากรอกขอมูลในช่องที่มี (*) และทำการชำระเงิน ภายใน 24 ชม. (หากเกิน 24 ชม. ระบบจะทำการลบรายการสั่งซื้อของคุณ)
+            </p>
+          </div>
+
+          <div class="search-payment">
+            <label for="">ค้นหารายการที่ต้องการชำระ</label>
+            <div class="input">
+              <input type="text" class="form-component input" placeholder="ใส่เบอร์โทร,เลขที่ใบสั่งซื้อ">
+              <img src="/img/svg/search.svg" alt="">
+            </div>
+          </div>
+
+          <div class="table-payment">
+            <div class="title-detail">
+              <div class="date">
+                วันที่ทำรายการ <span>18-10-2021</span>
+              </div>
+              <div class="No-payment">
+                เลขที่ใบสั่งซื้อ <span>1234567890</span>
+              </div>
+            </div>
+
+            <div class="table">
+              <div class="head-table">
+                <div class="th">รายการ</div>
+                <div class="th">จำนวน</div>
+                <div class="th">ราคา</div>
+              </div>
+
+              <div class="body-table">
+                <div class="list-item">
+                  <div class="td">
+                    <div class="name">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum.adipisicing elit. Ipsum.</div>
+                    <div class="option">ตัวเลือกผลิตภัณฑ์ 100 ml</div>
+                    <div class="ps">
+                      <img src="/img/svg/temperature-low-solid.svg" alt="">
+                      <span>การขนส่งแบบควบคุมอุณหภูมิ</span>
+                    </div>
+                  </div>
+                  <div class="td qty">1</div>
+                  <div class="td price">฿950</div>
+                </div>
+                
+                <div class="list-item">
+                  <div class="td">
+                    <div class="name">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</div>
+                    <div class="ps">
+                      <img src="/img/svg/temperature-low-solid.svg" alt="">
+                      <span>การขนส่งแบบควบคุมอุณหภูมิ</span>
+                    </div>
+                  </div>
+                  <div class="td qty">450</div>
+                  <div class="td price">฿12950</div>
+                </div>
+
+                <div class="list-data">
+                  <p>รวมรายการสั่งซื้อ</p>
+                  <p>฿3250</p>
+                </div>
+
+                <div class="list-data">
+                  <p><img src="/img/svg/snowflake-regular.svg" alt=""> ค่าจัดส่งแบบควบคุมอุณหภูมิ</p>
+                  <p>฿150</p>
+                </div>
+
+                <div class="list-data">
+                  <p><img src="/img/svg/shipping-fast-13.svg" alt=""> ค่าจัดส่งแบบทั่วไป</p>
+                  <p>฿150</p>
+                </div>
+
+                <div class="list-data sum">
+                  <p>รวมรายการสั่งซื้อ</p>
+                  <p>฿12150</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="select-pay">
+            <div class="online-banking">
+              <div class="title-select">
+                <div class="circle"><div class="inside select"></div></div>
+                <img src="/img/svg/university-solid.svg" alt="">
+                <span>Online Banking</span>
+              </div>
+
+              <div class="account-bank">
+                <div class="input-box">
+                  <label for="">เลือกบัญชีผู้รับ</label>
+                  <select name="" id="" class="form-component input">
+                    <option value="">SCB / 0000000000 / Mr.Job</option>
+                    <option value="">KBANK / 0000000000 / Mr.Job</option>
+                    <option value="">TMB / 0000000000 / Mr.Job</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="detail-input">
+                <div class="input-box name">
+                  <label for="">ชื่อผู้โอน</label>
+                  <input type="text" class="form-component input" placeholder="ชื่อผู้โอน">
+                </div>
+
+                <div class="input-box date">
+                  <label for="">วันที่</label>
+                  <input type="text" id="date" class="form-component input" placeholder="XX-XX-XXXX">
+                </div>
+
+                <div class="input-box time">
+                  <label for="">เวลา</label>
+                  <input type="date" id="time" class="form-component input" placeholder="XX:XX">
+                </div>
+              </div>
+
+              <div class="slip-zone">
+                <div class="upload-zone">
+                  <div class="picture"><img src="/img/default.jpg" alt=""></div>
+                  <div class="upload">
+                    <label>อัพโหลดสลิปโอนเงิน*</label>
+                    <div class="button-upload"><button class="form-component button">Choose File</button></div>
+                    <p>
+                      อัพโหลดได้เฉพาะไฟล์รูปภาพ ประเภท jpg png และมีขนาดไม่เกิน 3 Mb
+                    </p>
+                  </div>
+                </div>
+                <div class="button-pay"><button class="form-component button">ชำระเงิน</button></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer">
+      <p>
+        สงวนสิทธิ์ &copy; 2565 <a href="https://www.wynnsoft-solution.com/">บริษัท วินซอฟโซลูชั่น จำกัด</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src="/js/app.js"></script>
+  <script src="/js/confirm.js"></script>
+</body>
+</html>

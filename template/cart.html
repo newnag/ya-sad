@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YA-SAD</title>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+  <!-- <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"> -->
+  <link rel="stylesheet" href="/css/style.min.css">
+  <link rel="stylesheet" href="/css/cart.min.css">
+</head>
+<body>
+  <header>
+    <div class="header">
+      <div class="logo"><figure><a href=""><img src="/img/logo/logo-02.png" alt=""></a></figure></div>
+      <nav>
+        <div class="search">
+          <div class="input-search">
+            <input type="text" class="form-component input">
+            <img src="/img/svg/search.svg" class="icon-svg" alt="">
+          </div>
+        </div>
+
+        <div class="menu">
+          <ul>
+            <li class="active"><a href="">หน้าหลัก</a></li>
+            <li><a href="">บทความ</a></li>
+            <li><a href="">ติดต่อเรา</a></li>
+            <li><a href="">ยืนยันการชำระเงิน</a></li>
+          </ul>
+        </div>
+
+        <div class="cart">
+          <a href="">
+            <img src="/img/svg/bag-01.svg" class="icon-svg bag" alt="">
+            <div class="number-item"><span>3</span></div>
+          </a>
+        </div>
+
+        <div class="member">
+          <div class="member-button login"><a href=""><button class="form-component button">เข้าสู่ระบบ</button></a></div>
+          <div class="member-button register"><a href=""><button class="form-component button">สมัครสมาชิก</button></a></div>
+          <div class="account">
+            <div class="name-user" onclick="open_menu_account()">
+              <div class="name">
+                <span>ทศพล ชื่นมาลา</span>
+                <img src="/img/svg/down-arrow.svg" class="icon-svg" alt="">
+              </div>
+              <div class="class-user"><p>บุคคลทั่วไป</p></div>
+            </div>
+            <figure class="avatar" onclick="open_menu_account()"><img src="/img/avatar.jpg" alt=""></figure>
+
+            <ul class="menu-account">
+              <li><a href="">บัญชีของฉัน</a></li>
+              <li><a href="">ประวัติการซื้อ</a></li>
+              <li><a href="">ออกจากระบบ</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="close-mobile" onclick="close_mobile_menu()">X</div>
+      </nav>
+      <div class="hamburger" onclick="open_mobile_menu()">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="main-content container">
+      <div class="content">
+        <div class="cart">
+          <div class="left">
+            <div class="mycart">
+              <div class="title">
+                <h2>ผลิตภัณฑ์ในรถเข็นของคุณ</h2>
+              </div>
+  
+              <div class="table">
+                <div class="head-table">
+                  <div class="th">ผลิตภัณฑ์</div>
+                  <div class="th">จำนวน</div>
+                  <div class="th">ราคา</div>
+                </div>
+  
+                <div class="body-table">
+                  <div class="list-body">
+                    <div class="td pic"><img src="/img/6.jpg" alt=""></div>
+                    <div class="td name">
+                      <div class="prod-name">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat cupiditate ex consequatur! Accusamus vitae maxime, optio, officiis magni dolor maiores hic iure explicabo, </div>
+                      <div class="option">ตัวเลือกผลิตภัณฑ์ <span>100 ml</span></div>
+                      <div class="ps">
+                        <div class="text"><img src="/img/svg/temperature-low-solid.svg" alt=""><span>การขนส่งแบบควบคุม อุณหภูมิ</span></div>
+                      </div>
+                    </div>
+                    <div class="td qty">
+                      <input type="number" value="5">
+                    </div>
+                    <div class="td price">฿905</div>
+                    <div class="td delete"><img src="/img/svg/trash-14.svg" alt=""></div>
+                  </div>
+                  <div class="list-body">
+                    <div class="td pic"><img src="/img/3.jpg" alt=""></div>
+                    <div class="td name">
+                      <div class="prod-name">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat cupiditate ex consequatur! Accusamus vitae maxime, optio, officiis magni dolor maiores hic iure explicabo, </div>
+                      <div class="ps">
+                        <div class="text"><img src="/img/svg/temperature-low-solid.svg" alt=""><span>การขนส่งแบบควบคุม อุณหภูมิ</span></div>
+                      </div>
+                    </div>
+                    <div class="td qty">
+                      <input type="number" value="205">
+                    </div>
+                    <div class="td price">฿11,005</div>
+                    <div class="td delete"><img src="/img/svg/trash-14.svg" alt=""></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <div class="address-zone">
+              <div class="title"><h2>ที่อยู่ในการจัดส่ง</h2></div>
+              <div class="address-text">
+                <div class="name"><p>ทศพล ชื่นมาลา</p></div>
+                <div class="tel"><p>0897644358</p></div>
+                <div class="address">
+                  <p>
+                    บริษัทWynnsoft Solution 120/35 หมู่ 24 ต.ศิลา อ.เมือง ขอนแก่น 40000
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="summary">
+            <div class="title">
+              <h2>สรุปคำสั่งซื้อ</h2>
+              <div class="promotion">
+                <img src="/img/svg/bag-02.svg" alt="">
+                เมื่อสั่งซื้อครบ
+                <span>4,000 บาท ส่งฟรี</span>
+              </div>
+            </div>
+
+            <div class="table">
+              <div class="head-table">
+                <div class="th">รายการ</div>
+                <div class="th">จำนวน</div>
+                <div class="th">ราคา</div>
+              </div>
+
+              <div class="body-table">
+                <div class="list-item">
+                  <div class="td">
+                    <div class="name">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum.adipisicing elit. Ipsum.</div>
+                    <div class="option">ตัวเลือกผลิตภัณฑ์ 100 ml</div>
+                    <div class="ps">
+                      <img src="/img/svg/temperature-low-solid.svg" alt="">
+                      <span>การขนส่งแบบควบคุมอุณหภูมิ</span>
+                    </div>
+                  </div>
+                  <div class="td qty">1</div>
+                  <div class="td price">฿950</div>
+                </div>
+                
+                <div class="list-item">
+                  <div class="td">
+                    <div class="name">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</div>
+                    <div class="ps">
+                      <img src="/img/svg/temperature-low-solid.svg" alt="">
+                      <span>การขนส่งแบบควบคุมอุณหภูมิ</span>
+                    </div>
+                  </div>
+                  <div class="td qty">450</div>
+                  <div class="td price">฿12950</div>
+                </div>
+
+                <div class="list-data">
+                  <p>รวมรายการสั่งซื้อ</p>
+                  <p>฿3250</p>
+                </div>
+
+                <div class="list-data">
+                  <p><img src="/img/svg/snowflake-regular.svg" alt=""> ค่าจัดส่งแบบควบคุมอุณหภูมิ</p>
+                  <p>฿150</p>
+                </div>
+
+                <div class="list-data">
+                  <p><img src="/img/svg/shipping-fast-13.svg" alt=""> ค่าจัดส่งแบบทั่วไป</p>
+                  <p>฿150</p>
+                </div>
+
+                <div class="list-data sum">
+                  <p>รวมรายการสั่งซื้อ</p>
+                  <p>฿12150</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="button"><button class="form-component button">สั่งซื้อ</button></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer">
+      <p>
+        สงวนสิทธิ์ &copy; 2565 <a href="https://www.wynnsoft-solution.com/">บริษัท วินซอฟโซลูชั่น จำกัด</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="/js/app.js"></script>
+  <script src="/js/category.js"></script>
+</body>
+</html>

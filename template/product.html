@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YA-SAD</title>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+  <!-- <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"> -->
+  <link rel="stylesheet" href="/css/style.min.css">
+  <link rel="stylesheet" href="/css/product.min.css">
+</head>
+<body>
+  <header>
+    <div class="header">
+      <div class="logo"><figure><a href=""><img src="/img/logo/logo-02.png" alt=""></a></figure></div>
+      <nav>
+        <div class="search">
+          <div class="input-search">
+            <input type="text" class="form-component input">
+            <img src="/img/svg/search.svg" class="icon-svg" alt="">
+          </div>
+        </div>
+
+        <div class="menu">
+          <ul>
+            <li class="active"><a href="">หน้าหลัก</a></li>
+            <li><a href="">บทความ</a></li>
+            <li><a href="">ติดต่อเรา</a></li>
+            <li><a href="">ยืนยันการชำระเงิน</a></li>
+          </ul>
+        </div>
+
+        <div class="cart">
+          <a href="">
+            <img src="/img/svg/bag-01.svg" class="icon-svg bag" alt="">
+            <div class="number-item"><span>3</span></div>
+          </a>
+        </div>
+
+        <div class="member">
+          <div class="member-button login"><a href=""><button class="form-component button">เข้าสู่ระบบ</button></a></div>
+          <div class="member-button register"><a href=""><button class="form-component button">สมัครสมาชิก</button></a></div>
+          <div class="account">
+            <div class="name-user" onclick="open_menu_account()">
+              <div class="name">
+                <span>ทศพล ชื่นมาลา</span>
+                <img src="/img/svg/down-arrow.svg" class="icon-svg" alt="">
+              </div>
+              <div class="class-user"><p>บุคคลทั่วไป</p></div>
+            </div>
+            <figure class="avatar" onclick="open_menu_account()"><img src="/img/avatar.jpg" alt=""></figure>
+
+            <ul class="menu-account">
+              <li><a href="">บัญชีของฉัน</a></li>
+              <li><a href="">ประวัติการซื้อ</a></li>
+              <li><a href="">ออกจากระบบ</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="close-mobile" onclick="close_mobile_menu()">X</div>
+      </nav>
+      <div class="hamburger" onclick="open_mobile_menu()">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="main-content container">
+      <div class="aside">
+        <div class="aside-hamburger" onclick="open_aside_mobile()"><img src="/img/svg/right-arrow.svg" class="icon-svg" alt=""></div>
+
+        <div class="aside-nav">
+          <div class="menu">
+            <li class="syringe" onclick="open_subcate(this)">
+              <div class="name-cate">
+                <img src="/img/svg/syringe-02.svg" class="icon-svg" alt=""> ยาฉีด
+              </div>
+              <img src="/img/svg/angle-left-solid.svg" class="icon-svg"  alt="">
+
+              <ul>
+                <li><a href="">ยาฉีดทั้งหมด</a></li>
+                <li><a href="">ยาปฏิชีวนะ</a></li>
+                <li><a href="">NSAIDs</a></li>
+                <li><a href="">Steriod</a></li>
+                <li><a href="">วิตามิน แร่ธาตุ</a></li>
+                <li><a href="">ฮอร์โมน</a></li>
+              </ul>
+            </li>
+            <li class="pill" onclick="open_subcate(this)">
+                <div class="name-cate">
+                  <img src="/img/svg/pills-03.svg" class="icon-svg" alt=""> ยากิน
+                </div>
+              <img src="/img/svg/angle-left-solid.svg" class="icon-svg"  alt="">
+
+              <ul>
+                <li><a href="">ยากินทั้งหมด</a></li>
+                <li><a href="">ยาปฏิชีวนะ</a></li>
+                <li><a href="">NSAIDs</a></li>
+                <li><a href="">Steriod</a></li>
+                <li><a href="">วิตามิน แร่ธาตุ</a></li>
+                <li><a href="">ฮอร์โมน</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="">
+                <div class="name-cate">
+                  <img src="/img/svg/crem-04.svg" class="icon-svg" alt=""><span>ยาใช้ภายนอก</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <div class="name-cate">
+                  <img src="/img/svg/bacteria-05.svg" class="icon-svg" alt=""><span>ยาฆ่าเชื้อ</span> 
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <div class="name-cate">
+                  <img src="/img/svg/scalpel-06.svg" class="icon-svg" alt=""><span>อุปกรณ์ทางการแพทย์</span> 
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <div class="name-cate">
+                  <img src="/img/svg/other-07.svg" class="icon-svg" alt=""><span>อื่นๆ</span>
+                </div>
+              </a>
+            </li>
+          </div>
+
+          <div class="menu-animal">
+            <li>
+              <a href="">
+                <div class="name-cate">
+                  <img src="/img/svg/cat-09.svg" class="icon-svg" alt=""><span>สัตว์เลี้ยง</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <div class="name-cate">
+                  <img src="/img/svg/pig-10.svg" class="icon-svg" alt=""><span>สัตว์เศรษฐกิจ</span>
+                </div>
+              </a>
+            </li>
+          </div>
+
+          <div class="qrcode"><img src="/img/qr.png" alt=""></div>
+
+          <div class="button-social">
+            <div class="facebook"><button class="form-component button"><img src="/img/svg/facebook-square-brands.svg" class="icon-svg" alt=""> Like us on facebook</button></div>
+            <div class="line"><button class="form-component button"><img src="/img/svg/line.svg" class="icon-svg" alt=""> Add LINE friends</button></div>
+          </div>
+
+          <div class="button-slide-mobile" onclick="close_aside_mobile()"><img src="/img/svg/back-arrow.svg" class="icon-svg" alt=""></div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="breadcrumb">
+          <li><a href="">หน้าหลัก</a></li>
+          <li><a href="">ยากิน</a></li>
+          <li><a href="">วิตามิน แร่ธาตุ</a></li>
+          <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, in necessitatibus facilis eos, adipisci rem velit fugit deserunt magnam cupiditate, </li>
+        </div>
+
+        <div class="product">
+          <div class="picture-product">
+            <div class="big-pic"><img src="/img/14.jpg" alt=""></div>
+            <div class="thumb-pic">
+              <figure><img src="/img/1.jpg" alt=""></figure>
+              <figure><img src="/img/2.jpg" alt=""></figure>
+              <figure><img src="/img/3.jpg" alt=""></figure>
+              <figure><img src="/img/4.jpg" alt=""></figure>
+              <!-- รูปสุดท้ายจะมีการแสดงจำนวนรูปทั้งหมดที่มีเช่น 10+ -->
+              <figure>
+                <img src="/img/5.jpg" alt="">
+                <span>10+</span>
+              </figure>
+            </div>
+          </div>
+
+          <div class="detail-zone">
+            <div class="name-product"><h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, facere ad eveniet velit,</h1></div>
+            
+            <div class="exp-sale">
+              <div class="exp"><span>วันหมดอายุ: EXP</span> <span>23/11/2077</span></div>
+              <div class="sale">SALE</div>
+            </div>
+
+            <div class="tag">
+              <div class="tag-list">
+                <img src="/img/svg/catt-12.svg" alt="">
+                <span>สัตว์เลี้ยง</span>
+              </div>
+
+              <div class="tag-list">
+                <img src="/img/svg/pigg-11.svg" alt="">
+                <span>สัตว์เศรษฐกิจ</span>
+              </div>
+            </div>
+
+            <div class="price">
+              <div class="current-price">
+                <span>฿</span>
+                <span>950</span>
+              </div>
+              <div class="old-price">
+                <span>฿</span>
+                <span>1,950</span>
+              </div>
+            </div>
+
+            <div class="option-prod">
+              <label for="">ตัวเลือกผลิตภัณฑ์</label>
+              <div class="list-option">
+                <div class="option active">100 ml</div>
+                <div class="option">250 ml</div>
+                <div class="option">300 ml</div>
+                <div class="option">400 ml</div>
+              </div>
+            </div>
+
+            <div class="qty-addcart">
+              <div class="qty">
+                <label for="">จำนวน</label>
+                <select name="" id="" class="form-component input">
+                  <option value="">1</option>
+                  <option value="">2</option>
+                  <option value="">3</option>
+                  <option value="">4</option>
+                  <option value="">5</option>
+                  <option value="">6</option>
+                </select>
+              </div>
+
+              <div class="add-cart"><button class="form-component button">เพิ่มไปยังรถเข็น</button></div>
+            </div>
+
+            <div class="ps">
+              <div class="text temp">
+                <img src="/img/svg/temperature-low-solid.svg" alt="">
+                <span>การขนส่งแบบควบคุม </span><span> อุณหภูมิ</span>
+              </div>
+              <div class="text delivery">
+                <img src="/img/svg/bag-02.svg" alt="">
+                <span>เมื่อสั่งครบ 4,000 บาท </span><span> ส่งฟรี</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="detail-product">
+            <h3>รายละเอียดผลิตภัณฑ์</h3>
+
+            <div class="ck">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta iure quibusdam, 
+                aspernatur rerum veniam quis quidem praesentium cum officiis! Labore sequi eaque veniam explicabo nam eligendi,
+                suscipit provident praesentium sit.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta iure quibusdam, 
+                aspernatur rerum veniam quis quidem praesentium cum officiis! Labore sequi eaque veniam explicabo nam eligendi,
+                suscipit provident praesentium sit.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta iure quibusdam, 
+                aspernatur rerum veniam quis quidem praesentium cum officiis! Labore sequi eaque veniam explicabo nam eligendi,
+                suscipit provident praesentium sit.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta iure quibusdam, 
+                aspernatur rerum veniam quis quidem praesentium cum officiis! Labore sequi eaque veniam explicabo nam eligendi,
+                suscipit provident praesentium sit.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta iure quibusdam, 
+                aspernatur rerum veniam quis quidem praesentium cum officiis! Labore sequi eaque veniam explicabo nam eligendi,
+                suscipit provident praesentium sit.
+              </p>
+            </div>
+          </div>
+
+          <div class="product-relation">
+            <h2>ผลิตภัณฑ์ที่คล้ายกัน</h2>
+
+            <div class="grid-box">
+              <a href="">
+                <div class="box">
+                  <figure><img src="/img/test5.jpg" alt=""></figure>
+                  <div class="detail-zone">
+                    <div class="name"><p>ยารักษาสัตว์แบบฉีดเข้าทางท้อง</p></div>
+                    <div class="exp"><p>EXP: 11/8/2099</p></div>
+                    <div class="price">
+                      <div class="now-price">฿ 7200</div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+  
+              <a href="">
+                <div class="box">
+                  <div class="tag">
+                    <div class="sale"><span>SALE</span></div>
+                  </div>
+                  <figure><img src="/img/test4.jpg" alt=""></figure>
+                  <div class="detail-zone">
+                    <div class="name"><p>ยารักษาสัตว์แบบกิน</p></div>
+                    <div class="exp"><p>EXP: 11/8/2099</p></div>
+                    <div class="price">
+                      <div class="old-price">฿ 980</div>
+                      <div class="now-price">฿ 700</div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+    
+              <a href="">
+                <div class="box">
+                  <figure><img src="/img/test5.jpg" alt=""></figure>
+                  <div class="detail-zone">
+                    <div class="name"><p>ยารักษาสัตว์แบบฉีดเข้าทางท้อง</p></div>
+                    <div class="exp"><p>EXP: 11/8/2099</p></div>
+                    <div class="price">
+                      <div class="now-price">฿ 7200</div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+  
+              <a href="">
+                <div class="box">
+                  <div class="tag">
+                    <div class="sale"><span>SALE</span></div>
+                  </div>
+                  <figure><img src="/img/test1.jpg" alt=""></figure>
+                  <div class="detail-zone">
+                    <div class="name"><p>ยารักษาสัตว์แบบกิน</p></div>
+                    <div class="exp"><p>EXP: 11/8/2099</p></div>
+                    <div class="price">
+                      <div class="old-price">฿ 980</div>
+                      <div class="now-price">฿ 700</div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+    
+              <a href="">
+                <div class="box">
+                  <div class="tag">
+                    <div class="sale"><span>SALE</span></div>
+                  </div>
+                  <figure><img src="/img/test2.jpg" alt=""></figure>
+                  <div class="detail-zone">
+                    <div class="name"><p>ยารักษาสัตว์แบบกิน มีอันตรายน้อย รสหวาน คนก็กินได้</p></div>
+                    <div class="exp"><p>EXP: 11/8/2099</p></div>
+                    <div class="price">
+                      <div class="old-price">฿ 98000</div>
+                      <div class="now-price">฿ 70000</div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+    
+              <a href="">
+                <div class="box">
+                  <div class="tag">
+                    <div class="sale"><span>SALE</span></div>
+                  </div>
+                  <figure><img src="/img/test3.jpg" alt=""></figure>
+                  <div class="detail-zone">
+                    <div class="name"><p>ยารักษาสัตว์แบบกิน</p></div>
+                    <div class="exp"><p>EXP: 11/8/2099</p></div>
+                    <div class="price">
+                      <div class="old-price">฿ 980</div>
+                      <div class="now-price">฿ 700</div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer">
+      <p>
+        สงวนสิทธิ์ &copy; 2565 <a href="https://www.wynnsoft-solution.com/">บริษัท วินซอฟโซลูชั่น จำกัด</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="/js/app.js"></script>
+  <script src="/js/category.js"></script>
+</body>
+</html>

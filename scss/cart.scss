@@ -1,0 +1,358 @@
+@import 'variable';
+
+.main-content{
+  margin-top: 6em;
+
+  @media screen and (min-width:$lg){
+    display: grid;
+    grid-template-columns: 100%;
+  }
+
+  .cart{
+    margin: 2em 0;
+  
+    @media screen and (min-width:$lg){
+      margin: unset;
+      margin-bottom: 1em;
+      min-height: 1250px;
+      display: grid;
+      grid-template-columns: 49% 49%;
+      grid-column-gap: 2%;
+    }
+    @media screen and (min-width:$xl){
+      display: grid;
+      grid-template-columns: 49% 49%;
+      grid-column-gap: 2%;
+      min-height: 800px;
+    }
+  
+    .mycart{
+      @media screen and (min-width:$lg){
+        margin-bottom: 2em;
+      }
+  
+      .title{
+        margin-bottom: .5em;
+  
+        @media screen and (min-width:$lg){
+          margin-bottom: 1em;
+        }
+      }
+  
+      .table{
+        overflow-x: scroll;
+  
+        @media screen and (min-width:$xl){
+          overflow-x: unset;
+        }
+  
+        .head-table{
+          display: grid;
+          grid-template-columns: 77% 30% 35%;
+          grid-auto-flow: column;
+          border-radius: 5px 5px 0 0 ;
+  
+          @media screen and (min-width:$md){
+            grid-template-columns: 60% 15% 25%;
+          }
+  
+          .th{
+            color: $white;
+            background-color: $head-gray;
+            padding: .5em;
+  
+            &:first-child{
+              border-radius: 5px 0 0 0;
+            }
+            &:last-child{
+              border-radius: 0 5px 0 0;
+              padding-right: 35px;
+            }
+            &:nth-child(2),&:nth-child(3){
+              text-align: center;
+            }
+          }
+        }
+  
+        .body-table{
+          .list-body{
+            display: grid;
+            grid-template-columns: 19% 59% 29% 29% 6%;
+            grid-row-gap: 10px;
+            grid-auto-flow: column;
+            margin-bottom: .25em;
+  
+            @media screen and (min-width:$md){
+              grid-template-columns: 10% 50% 15% 19% 6%;
+            }
+  
+            .td{
+              background-color: $black;
+              padding: 5px;
+            }
+  
+            .pic{
+              display: flex;
+              align-items: center;
+              justify-content: center;
+  
+              img{
+                // width: 70px;
+                // height: 70px;
+                width: 100%;
+                height: unset;
+              }
+            }
+  
+            .name{
+              .prod-name{
+                color: $orange;
+                height: 3.1em;
+                overflow: hidden;
+              }
+              .option{
+                color: $light-gray;
+  
+                span{
+                  font-size: 1em;
+                }
+              }
+              .ps{
+                .text{
+                  img{
+                    filter: brightness(.6);
+                    width: 15px;
+                    height: 15px;
+                  }
+                  color: $light-gray;
+                }
+              }
+            }
+  
+            .qty{
+              display: flex;
+              justify-content: center;
+  
+              input{
+                width: 50px;
+                height: 30px;
+                background-color: inherit;
+                border: 1px solid $white;
+                color: $white;
+                text-align: center;
+              }
+            }
+  
+            .price{
+              text-align: center;
+            }
+  
+            .delete{
+              img{
+                filter: invert(1);
+                width: 20px;
+                height: 20px;
+                cursor: pointer;
+              }
+            }
+  
+            &:last-child{
+              .td:first-child{
+                border-radius: 0 0 0 5px;
+              }
+              .td:last-child{
+                border-radius: 0 0 5px 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  
+    .address-zone{
+      margin-top: 1em;
+  
+      @media screen and (min-width:$lg){
+        margin-bottom: 2em;
+      }
+  
+      .address-text{
+        margin: .5em 0;
+  
+        p{
+          color: $orange;
+        }
+      }
+    }
+  
+    .summary{
+      margin-top: 1em;
+  
+      @media screen and (min-width:$lg){
+        margin: 0;
+        margin-bottom: 2em;
+      }
+  
+      .title{
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+  
+        @media screen and (min-width:$md){
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+        }
+  
+        .promotion{
+          span{
+            font-size: 1em;
+            color: $orange;
+          }
+        }
+      }
+  
+      .table{
+        margin-top: 1em;
+        overflow-x: scroll;
+  
+        @media screen and (min-width:$xl){
+          overflow-x: unset;
+        }
+  
+        .head-table{
+          display: grid;
+          grid-template-columns: 80% 20% 30%;
+          grid-auto-columns: auto;
+  
+          @media screen and (min-width:$md){
+            grid-template-columns: 65% 15% 20%;
+          }
+          
+          .th{
+            padding: 5px 10px;
+            background-color: $head-gray;
+  
+            &:first-child{
+              border-radius: 5px 0 0 0;
+            }
+            &:nth-child(2){
+              text-align: center;
+            }
+            &:last-child{
+              border-radius: 0 5px 0 0;
+              text-align: end;
+            }
+          }
+        }
+  
+        .body-table{
+          .list-item{
+            display: grid;
+            grid-template-columns: 80% 20% 30%;
+            grid-auto-columns: auto;
+            margin-bottom: .25em;
+  
+            @media screen and (min-width:$md){
+              grid-template-columns: 65% 15% 20%;
+            }
+  
+            // &:last-child{
+            //   .td{
+            //     &:first-child{
+            //       border-radius: 0 0 0 5px;
+            //     }
+            //     &:last-child{
+            //       border-radius: 0 0 5px 0;
+            //     }
+            //   }
+            // }
+  
+            .td{
+              background-color: $black;
+              padding: 5px 10px;
+  
+              .name{
+                font-size: 1.2em;
+                color: $white;
+              }
+              .option{
+                color: $light-gray;
+                font-size: .8em;
+              }
+              .ps{
+                color: $light-gray;
+                img{
+                  width: 10px;
+                  height: 10px;
+                  filter: brightness(.8);
+                }
+              }
+            }
+            .qty{
+              text-align: center;
+            }
+            .price{
+              text-align: end;
+            }
+          }
+  
+          .list-data{
+            display: grid;
+            grid-template-columns: 65% 65%;
+            grid-auto-columns: auto;
+            margin-bottom: .25em; 
+  
+            @media screen and (min-width:$md){
+              grid-template-columns: 50% 50%;
+            }
+  
+            p{
+              color: $light-gray;
+              background-color: $black;
+              font-size: 1.1em;
+              padding: 5px 10px;
+  
+              img{
+                width: 15px;
+                height: 15px;
+                filter: invert(1) brightness(.7);
+              }
+  
+              &:last-child{
+                text-align: end;
+              }
+            }
+  
+            &.sum{
+              p:first-child{
+                color: $orange;
+                font-size: 1.2em;
+                border-radius: 0 0 0 5px;
+              }
+              p:last-child{
+                font-size: 1.2em;
+                color: $white;
+                border-radius: 0 0 5px 0;
+              }
+            }
+          }
+        }
+      }
+  
+      .button{
+        @media screen and (min-width:$md){
+          margin-top: .5em;
+        }
+  
+        button{
+          width: 100%;
+          background-color: $orange;
+          color: $white;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
