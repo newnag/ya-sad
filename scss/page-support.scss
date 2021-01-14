@@ -253,4 +253,624 @@
       }
     }
   }
+
+  .profile{
+    margin: 2em 0;
+    min-height: 82vh;
+    position: relative;
+  
+    @media screen and (min-width:$lg){
+      margin: unset;
+      margin-bottom: 1em;
+      min-height: 1230px;
+      display: grid;
+      grid-template-columns: 58% 40%;
+      grid-column-gap: 2%;
+    }
+    @media screen and (min-width:$xl){
+      min-height: 800px;
+      padding: 0 6em;
+    }
+
+    .left{
+      margin-bottom: 2em;
+
+      .title{
+        margin-bottom: 1em;
+      }
+
+      .personal-info,.address-info{
+        margin-bottom: 1em;
+
+        .input-box{
+          margin: .5em 0;
+
+          label{
+            font-size: 1.1em;
+          }
+        }
+      }
+
+      .personal-info{
+        @media screen and (min-width:$md){
+          display: grid;
+          grid-template-columns: repeat(2,1fr);
+          grid-column-gap: 1em;
+          grid-row-gap: .5em;
+        }
+
+        .name{
+          @media screen and (min-width:$xl){
+            grid-column: 1/3;
+          }
+        }
+        
+      }
+
+      .address-info{
+        background-color: $black;
+        border-radius: 5px;
+        padding: 1em;
+
+        @media screen and (min-width:$md){
+          display: grid;
+          grid-template-columns: repeat(2,1fr);
+          grid-column-gap: 1em;
+          grid-row-gap: .5em;
+        }
+
+        .addr{
+          @media screen and (min-width:$md) and (max-width:($xl)-1px) {
+            grid-column: 1/3;
+          }
+        }
+      }
+
+      .button{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 1em;
+
+        button{
+          cursor: pointer;
+        }
+
+        .change-pass{
+          background-color: $light-gray;
+          color: $white;
+        }
+        .save{
+          background-color: $orange;
+          color: $white;
+        }
+      }
+    }
+
+    .right{
+      .title{
+        margin-bottom: 1em;
+      }
+
+      .box-upload{
+        background-color: $black;
+        padding: 2em;
+
+        @media screen and (min-width:$lg){
+          width: 80%;
+          margin: 0 auto;
+        }
+        @media screen and (min-width:$xxl){
+          width: 60%;
+          margin: 0 auto;
+        }
+
+        .pic-thumb{
+          text-align: center;
+          img{
+            width: 200px;
+            height: 200px;
+          }
+        }
+
+        h3{
+          text-align: center;
+        }
+
+        .button-pic{
+          text-align: center;
+          margin: 1em 0;
+
+          button{
+            background-color: $orange;
+            color: $white;
+            cursor: pointer;
+          }
+        }
+
+        p{
+          padding: 0 3em;
+          color: $light-gray;
+        }
+      }
+
+      .box-upload-doctor{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-row-gap: 1em;
+        background-color: $black;
+        padding: 2em;
+        border-radius: 5px;
+
+        @media screen and (min-width:$lg){
+          grid-template-columns: 49% 49%;
+          grid-column-gap: 2%;
+          padding: 1em;
+        }
+
+        .pic-zone,.cer-upload{
+          .pic-thumb{
+            text-align: center;
+
+            img{
+              width: 200px;
+              height: 200px;
+              border-radius: 5px;
+
+              @media screen and (min-width:$lg) and (max-width:($xl)-1px){
+                width: 100px;
+                height: 100px;
+              }
+            }
+          }
+
+          h3{
+            text-align: center;
+            margin: .5em 0;
+          }
+
+          .button-pic{
+            text-align: center;
+            margin: 1em 0;
+
+            button{
+              background-color: $orange;
+              color: $white;
+              cursor: pointer;
+            }
+          }
+
+          p{
+            color: $light-gray;
+            padding: 0 2em;
+
+            @media screen and (min-width:$lg){
+              font-size: .7em;
+            }
+          }
+        }
+        
+        .pic-zone{
+          border-bottom: 2px solid $light-gray;
+          padding-bottom: 1em;
+
+          @media screen and (min-width:$lg){
+            border-bottom: unset;
+            padding-bottom: unset;
+            position: relative;
+
+            &:after{
+              content: '';
+              position: absolute;
+              right: -1px;
+              top: 50%;
+              transform: translateY(-50%);
+              width: 2px;
+              height: 200px;
+              background-color: $light-gray;
+            }
+          }
+        }
+      }
+
+      .status-doc{
+        background-color: $black;
+        padding: 2em;
+        border-radius: 5px;
+        margin-top: 2em;
+
+        h2{
+          margin-bottom: .5em;
+
+          span{
+            color: $orange;
+            font-size: 1em;
+          }
+        }
+
+        p{
+          color: $light-gray;
+        }
+      }
+    }
+  }
+
+  .history{
+    margin: 2em 0;
+    min-height: 82vh;
+  
+    @media screen and (min-width:$lg){
+      margin: unset;
+      margin-bottom: 1em;
+      min-height: 1230px;
+    }
+    @media screen and (min-width:$xl){
+      min-height: 800px;
+      padding: 0 10em;
+    }
+
+    .title{
+      margin-bottom: 1em;
+    }
+
+    .list-item{
+      margin-bottom: 2em;
+
+      .title-detail{
+        display: flex;
+        flex-direction: column;
+
+        @media screen and (min-width:$md){
+          flex-direction: row;
+          align-items: flex-end;
+          justify-content: space-between;
+        }
+
+        .detail{
+          @media screen and (min-width:$lg){
+            display: flex;
+            align-items: center;
+
+            .date{
+              margin-right: 10px;
+            }
+          }
+
+          span{
+            font-size: 1em;
+            color: $orange;
+          }
+        }
+
+        .status{
+          margin: .5em 0;
+
+          @media screen and (min-width:$md){
+            margin: 0;
+          }
+
+          span{
+            font-size: 1em;
+          }
+          .pending,.delivery{
+            color: $orange;
+          }
+          .link{
+            a{
+              img{
+                width: 10px;
+                height: 10px;
+              }
+            }
+          }
+        }
+      }
+
+      .table{
+        overflow-x: scroll;
+
+        @media screen and (min-width:$xl){
+          overflow-x: unset;
+        }
+
+        .head-table{
+          display: grid;
+          grid-template-columns: 40% 40% 20% 30%;
+          grid-auto-columns: auto;
+
+          @media screen and (min-width:$md){
+            grid-template-columns: 31% 31% 18% 20%;
+          }
+          @media screen and (min-width:$lg){
+            grid-template-columns: 31% 39% 12% 18%;
+          }
+
+          .th{
+            background-color: $head-gray;
+            padding: 5px;
+
+            &:first-child{
+              border-radius: 5px 0 0 0;
+              grid-column: 1/3;
+              padding-left: 10px;
+            }
+            &:nth-child(2){
+              text-align: center;
+            }
+            &:last-child{
+              border-radius: 0 5px 0 0;
+              padding-right: 10px;
+              text-align: end;
+            }
+          }
+        }
+
+        .body-table{
+          .list-body{
+            display: grid;
+            grid-template-columns: 20% 60% 20% 30%;
+            margin-bottom: .25em;
+
+            @media screen and (min-width:$md){
+              grid-template-columns: 12% 50% 18% 20%;
+            }
+            @media screen and (min-width:$lg){
+              grid-template-columns: 12% 58% 12% 18%;
+            }
+
+
+            .td{
+              background-color: $black;
+              padding: 5px 10px;
+            }
+            .pic{
+              display: flex;
+              align-items: center;
+              justify-content: center;
+  
+              img{
+                // width: 70px;
+                // height: 70px;
+                width: 100%;
+                height: unset;
+              }
+            }
+            .name{
+              .prod-name{
+                color: $orange;
+                height: 3.1em;
+                overflow: hidden;
+              }
+              .option{
+                color: $light-gray;
+  
+                span{
+                  font-size: 1em;
+                }
+              }
+              .ps{
+                .text{
+                  img{
+                    filter: brightness(.6);
+                    width: 15px;
+                    height: 15px;
+                  }
+                  color: $light-gray;
+                }
+              }
+            }
+            .qty{
+              display: flex;
+              justify-content: center;
+  
+              input{
+                width: 50px;
+                height: 30px;
+                background-color: inherit;
+                border: 1px solid $white;
+                color: $white;
+                text-align: center;
+              }
+            }
+            .price{
+              text-align: end;
+            }
+          }
+
+          .list-data{
+            display: grid;
+            grid-template-columns: 65% 65%;
+            grid-auto-columns: auto;
+            margin-bottom: .25em; 
+  
+            @media screen and (min-width:$md){
+              grid-template-columns: 50% 50%;
+            }
+  
+            p{
+              color: $light-gray;
+              background-color: $black;
+              font-size: 1.1em;
+              padding: 5px 10px;
+  
+              img{
+                width: 15px;
+                height: 15px;
+                filter: invert(1) brightness(.7);
+              }
+  
+              &:last-child{
+                text-align: end;
+              }
+            }
+  
+            &.sum{
+              p:first-child{
+                color: $orange;
+                font-size: 1.2em;
+              }
+              p:last-child{
+                font-size: 1.2em;
+                color: $white;
+              }
+            }
+          }
+        }
+      }
+
+      >.button{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        background-color: $black;
+        margin-bottom: .25em;
+        padding: .5em .25em;
+
+        >button{
+          margin-left: 10px;
+          width: 100px;
+
+          &.paid{
+            background-color: $orange;
+            color: $white;
+          }
+          &.cancle{
+            background-color: $light-gray;
+            color: $white;
+          }
+        }
+      }
+
+      .address{
+        .title-collap{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: $black;
+          padding: 5px;
+          cursor: pointer;
+
+          img{
+            width: 12px;
+            height: 12px;
+            filter: invert(1);
+            margin-right: 5px;
+          }
+
+          &.collap{
+            display: none;
+          }
+        }
+
+        .box-address{
+          background-color: $black;
+          padding: .5em;
+          border-radius: 0 0 5px 5px;
+
+          h2{
+            margin-bottom: .5em;
+          }
+          p{
+            color: $orange;
+          }
+
+          &.collap{
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  .article{
+    margin: 2em 0;
+    min-height: 82vh;
+  
+    @media screen and (min-width:$lg){
+      margin: unset;
+      margin-bottom: 1em;
+      min-height: 1230px;
+    }
+    @media screen and (min-width:$xl){
+      min-height: 800px;
+      padding: 0 6em;
+    }
+
+    .title{
+      text-align: center;
+      margin-bottom: 3em;
+    }
+
+    .grid-article{
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+
+      @media screen and (min-width:$xl){
+        grid-template-columns: repeat(5,1fr);
+      }
+
+      .box{
+        position: relative;
+        display: flex;
+        cursor: pointer;
+
+        img{
+          width: 100%;
+          height: 200px;
+          opacity: .4;
+          object-fit: cover;
+
+          @media screen and (min-width:$xl){
+            height: 300px;
+          }
+          @media screen and (min-width:$xxl){
+            height: 350px;
+          }
+        }
+
+        .detail{
+          position: absolute;
+          bottom: 5px;
+          left: 5px;
+          z-index: 1;
+        }
+
+        .hover-box{
+          position: absolute;
+          z-index: -1;
+          opacity: 0;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          .button{
+            button{
+              background-color: $orange;
+              color: $white;
+              cursor: pointer;
+            }
+          }
+        }
+
+        &:hover {
+          .hover-box{
+            z-index: 2;
+            opacity: 1;
+            transition: .3s;
+          }
+          .detail{
+            z-index: -1;
+          }
+          img{
+            opacity: 1;
+            transition: .3s;
+          }
+        }
+      }
+    }
+  }
 }
