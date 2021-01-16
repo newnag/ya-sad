@@ -330,5 +330,6 @@
 .main-content .content .recomment .load-more button {
   background-color: #FF9B21;
   color: #FFF;
+  cursor: pointer;
 }
 /*# sourceMappingURL=home.css.map */

@@ -177,15 +177,15 @@
 
         <div class="product">
           <div class="picture-product">
-            <div class="big-pic"><img src="/img/14.jpg" alt=""></div>
+            <div class="big-pic" onclick="zoompic(this)"><img data-index="5" src="/img/6.jpg" alt=""></div>
             <div class="thumb-pic">
-              <figure><img src="/img/1.jpg" alt=""></figure>
-              <figure><img src="/img/2.jpg" alt=""></figure>
-              <figure><img src="/img/3.jpg" alt=""></figure>
-              <figure><img src="/img/4.jpg" alt=""></figure>
+              <figure onclick="zoompic(this)"><img data-index="0" src="/img/1.jpg" alt=""></figure>
+              <figure onclick="zoompic(this)"><img data-index="1" src="/img/2.jpg" alt=""></figure>
+              <figure onclick="zoompic(this)"><img data-index="2" src="/img/3.jpg" alt=""></figure>
+              <figure onclick="zoompic(this)"><img data-index="3" src="/img/4.jpg" alt=""></figure>
               <!-- รูปสุดท้ายจะมีการแสดงจำนวนรูปทั้งหมดที่มีเช่น 10+ -->
-              <figure>
-                <img src="/img/5.jpg" alt="">
+              <figure onclick="zoompic(this)">
+                <img data-index="4" src="/img/5.jpg" alt="">
                 <span>10+</span>
               </figure>
             </div>
@@ -381,6 +381,31 @@
                   </div>
                 </div>
               </a>
+            </div>
+          </div>
+
+          <div class="zoompic">
+            <div class="close" onclick="closeModal()">X</div>
+            <div class="box-img">
+              <div class="swiper-container big-slide">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><img src="/img/1.jpg" alt=""></div>
+                  <div class="swiper-slide"><img src="/img/2.jpg" alt=""></div>
+                  <div class="swiper-slide"><img src="/img/3.jpg" alt=""></div>
+                  <div class="swiper-slide"><img src="/img/4.jpg" alt=""></div>
+                  <div class="swiper-slide"><img src="/img/5.jpg" alt=""></div>
+                  <div class="swiper-slide"><img src="/img/6.jpg" alt=""></div>
+                  <div class="swiper-slide"><img src="/img/7.jpg" alt=""></div>
+                  <div class="swiper-slide"><img src="/img/8.jpg" alt=""></div>
+                  <div class="swiper-slide"><img src="/img/9.jpg" alt=""></div>
+                  <div class="swiper-slide"><img src="/img/10.jpg" alt=""></div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+                <!-- Add Arrows -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+              </div>
             </div>
           </div>
         </div>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YA-SAD</title>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+  <!-- <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"> -->
+  <link rel="stylesheet" href="/css/style.min.css">
+  <link rel="stylesheet" href="/css/page-support.min.css">
+</head>
+<body>
+  <header>
+    <div class="header">
+      <div class="logo"><figure><a href=""><img src="/img/logo/logo-02.png" alt=""></a></figure></div>
+      <nav>
+        <div class="search">
+          <div class="input-search">
+            <input type="text" class="form-component input">
+            <img src="/img/svg/search.svg" class="icon-svg" alt="">
+          </div>
+        </div>
+
+        <div class="menu">
+          <ul>
+            <li><a href="">หน้าหลัก</a></li>
+            <li><a href="">บทความ</a></li>
+            <li class="active"><a href="">ติดต่อเรา</a></li>
+            <li><a href="">ยืนยันการชำระเงิน</a></li>
+          </ul>
+        </div>
+
+        <div class="cart">
+          <a href="">
+            <img src="/img/svg/bag-01.svg" class="icon-svg bag" alt="">
+            <div class="number-item"><span>3</span></div>
+          </a>
+        </div>
+
+        <div class="member">
+          <div class="member-button login"><a href=""><button class="form-component button">เข้าสู่ระบบ</button></a></div>
+          <div class="member-button register"><a href=""><button class="form-component button">สมัครสมาชิก</button></a></div>
+          <div class="account">
+            <div class="name-user" onclick="open_menu_account()">
+              <div class="name">
+                <span>ทศพล ชื่นมาลา</span>
+                <img src="/img/svg/down-arrow.svg" class="icon-svg" alt="">
+              </div>
+              <div class="class-user"><p>บุคคลทั่วไป</p></div>
+            </div>
+            <figure class="avatar" onclick="open_menu_account()"><img src="/img/avatar.jpg" alt=""></figure>
+
+            <ul class="menu-account">
+              <li><a href="">บัญชีของฉัน</a></li>
+              <li><a href="">ประวัติการซื้อ</a></li>
+              <li><a href="">ออกจากระบบ</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="close-mobile" onclick="close_mobile_menu()">X</div>
+      </nav>
+      <div class="hamburger" onclick="open_mobile_menu()">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="main-content container">
+      <div class="content">
+        <div class="contact">
+          <div class="breadcrumb">
+            <li><a href="">หน้าหลัก</a></li>
+            <li>ติดต่อเรา</li>
+          </div>
+
+          <div class="contact-zone">
+            <div class="form-contact">
+              <div class="title"><h1>ติดต่อเรา</h1></div>
+
+              <div class="form">
+                <div class="input-box">
+                  <label for="">ชื่อ</label>
+                  <input type="text" class="form-component input" id="name" placeholder="ชื่อ">
+                </div>
+
+                <div class="input-box">
+                  <label for="">Email</label>
+                  <input type="email" class="form-component input" id="email" placeholder="อีเมล์">
+                </div>
+
+                <div class="input-box">
+                  <label for="">ข้อความ</label>
+                  <textarea name="" cols="30" rows="5" id="text" class="form-component textarea"></textarea>
+                </div>
+
+                <div class="button"><button class="form-component button" onclick="send_contact()">ส่งข้อความ</button></div>
+              </div>
+
+              <div class="ps">
+                <div class="date-op"><span>เวลาทำการ: จันทร์-เสาร์ 8:30-17:00</span></div>
+                <div class="email"><span>ต้องการโฆษณา: wynnsoft20151@gmail.com</span></div>
+                <div class="tel"><span>เบอร์โทรศัพท์: 043-002-300, 062-909-1110(การตลาด)</span></div>
+              </div>
+            </div>
+
+            <div class="map-zone">
+              <div class="title"><h2>แผนที่ตั้งบริษัท</h2></div>
+
+              <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2396.47727409749!2d-122.34010253281745!3d47.60756912427035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54906ab25798a501%3A0xc1d22831e65bc312!2sPike%20Place%20Fish%20Market!5e0!3m2!1sth!2sth!4v1610682627461!5m2!1sth!2sth" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+              </div>
+
+              <div class="button-social">
+                <a href="">
+                  <div class="line">
+                    <img src="/img/svg/line.svg" alt="">
+                    <span>ADD LINE Friends</span>
+                  </div>
+                </a>
+                
+                <a href="">
+                  <div class="facebook">
+                    <img src="/img/svg/facebook-square-brands.svg" alt="">
+                    <span>Like is on facebook</span>
+                  </div>
+                </a>
+              </div>
+
+              <div class="address-company">
+                <p>
+                  บริษัท วินซอฟโซลูชั่น จำกัด (สำนักงานใหญ่) 120/34-35 หมู่ 24
+                  ตำบล บ้านเป็ด อำเภอ เมือง จังหวัด ขอนแก่น
+                  40000
+                </p>
+                <p>
+                  เลขประจำตัวผู้เสียภาษี 0123456789123
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer">
+      <p>
+        สงวนสิทธิ์ &copy; 2565 <a href="https://www.wynnsoft-solution.com/">บริษัท วินซอฟโซลูชั่น จำกัด</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+  <script src="/js/app.js"></script>
+  <script src="/js/contact.js"></script>
+</body>
+</html>

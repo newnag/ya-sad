@@ -416,4 +416,14 @@
   color: #FFF;
   cursor: pointer;
 }
+
+@media (hover: hover) {
+  .main-content .cart .summary .button button:hover {
+    background-color: inherit;
+    color: #FF9B21;
+    border: 1px solid #FF9B21;
+    -webkit-transition: .3s;
+    transition: .3s;
+  }
+}
 /*# sourceMappingURL=cart.css.map */

@@ -350,6 +350,15 @@
           background-color: $orange;
           color: $white;
           cursor: pointer;
+
+          @media (hover:hover){
+            &:hover{
+              background-color: inherit;
+              color: $orange;
+              border: 1px solid $orange;
+              transition: .3s;
+            }
+          }
         }
       }
     }

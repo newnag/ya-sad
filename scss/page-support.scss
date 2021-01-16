@@ -8,7 +8,7 @@
     grid-template-columns: 100%;
   }
 
-  >.login,.regis{
+  .content >.login,.regis{
     margin: 2em 0;
     min-height: 82vh;
   
@@ -22,7 +22,7 @@
       padding: 0 10em;
     }
 
-    .box{
+    >.box{
       display: grid;
       grid-template-columns: 100%;
 
@@ -803,8 +803,11 @@
 
     .grid-article{
       display: grid;
-      grid-template-columns: repeat(2,1fr);
+      grid-template-columns: 100%;
 
+      @media screen and (min-width:$sm){
+        grid-template-columns: repeat(2,1fr);
+      }
       @media screen and (min-width:$xl){
         grid-template-columns: repeat(5,1fr);
       }
@@ -869,6 +872,180 @@
             opacity: 1;
             transition: .3s;
           }
+        }
+      }
+    }
+  }
+
+  .article-detail{
+    margin: 2em 0;
+    min-height: 82vh;
+  
+    @media screen and (min-width:$lg){
+      margin: unset;
+      margin-bottom: 1em;
+      min-height: 1230px;
+    }
+    @media screen and (min-width:$xl){
+      min-height: 800px;
+      padding: 0 6em;
+    }
+
+    .head-detail{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 3em;
+    }
+
+    .head-picture{
+      margin-bottom: 2em;
+
+      img{
+        width: 100%;
+      }
+    }
+
+    .title{
+      margin-bottom: 2em;
+      border-bottom: 1px solid $light-gray;
+      padding-bottom: 1em;
+    }
+
+    .ck{
+      p{
+        font-size: 1em;
+
+        img{
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
+
+  .contact{
+    margin: 2em 0;
+    min-height: 82vh;
+  
+    @media screen and (min-width:$lg){
+      margin: unset;
+      margin-bottom: 1em;
+      min-height: 1230px;
+    }
+    @media screen and (min-width:$xl){
+      min-height: 800px;
+      padding: 0 6em;
+    }
+
+    .contact-zone{
+      display: grid;
+      grid-template-columns: 100%;
+      grid-row-gap: 2em;
+      margin-top: 2em;
+
+      @media screen and (min-width:$md){
+        padding: 0 3em;
+      }
+      @media screen and (min-width:$lg){
+        grid-template-columns: 49% 49%;
+        grid-column-gap: 2%;
+        padding: 0 5em;
+      }
+      @media screen and (min-width:$xl){
+        grid-template-columns: 48% 48%;
+        grid-column-gap: 4%;
+        padding: 0 5em;
+      }
+
+      .form-contact{
+
+        .title{
+          margin-bottom: 1em;
+        }
+
+        .form{
+          margin-bottom: 1em;
+
+          .input-box{
+            margin: .5em 0;
+
+            label{
+              font-size: 1em;
+            }
+          }
+
+          .button{
+            width: 100%;
+
+            button{
+              background-color: $orange;
+              color: $white;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+
+      .map-zone{
+        .title{
+          margin-bottom: 2em;
+        }
+
+        .map{
+          iframe{
+            width: 100%!important;
+            height: 100%!important;
+            border-radius: 5px;
+
+            @media screen and (min-width:$md){
+              height: 220px!important;
+            }
+            @media screen and (min-width:$lg){
+              height: 230px!important;
+            }
+            @media screen and (min-width:$xl){
+              height: 250px!important;
+            }
+          }
+        }
+
+        .button-social{
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin: 1em 0;
+
+          .line,.facebook{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 110px;
+
+            @media screen and (min-width:$sm){
+              width: 150px;
+            }
+
+            img{
+              filter: invert(1) brightness(5);
+              margin-right: 3px;
+              width: 10px;
+              height: 10px;
+            }
+          }
+          .line{
+            background-color: $green-line;
+          }
+          .facebook{
+            background-color: $blue-face;
+          }
+        }
+
+        .address-company{
+          margin: 1em 0;
         }
       }
     }
