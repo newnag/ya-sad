@@ -43,6 +43,10 @@
             width: 75%;
             text-align: end;
 
+            @media screen and (min-width:$xl){
+              width: 45%;
+            }
+
             h2{
               margin: .5em 0;
               color: $orange;
@@ -222,10 +226,13 @@
 
           .detail{
             position: absolute;
-            right: 5px;
+            right: 0;
+            padding-right: 5px;
             top: 0;
             width: 75%;
+            height: 100%;
             text-align: end;
+            background: #ffffff3b;
 
             h2{
               margin: .5em 0;

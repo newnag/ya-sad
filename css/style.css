@@ -320,19 +320,49 @@ img {
           justify-content: space-between;
   position: fixed;
   top: 0;
-  left: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   width: 100%;
   z-index: 8;
   background-color: #3B3B3B;
+  max-width: 95%;
+  margin: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    max-width: 90%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .header {
+    max-width: 1024px;
+    margin: 0 4em;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .header {
+    max-width: 1280px;
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 1536px) {
+  .header {
+    max-width: 1536px;
+  }
 }
 
 @media screen and (max-width: 1023px) {
   .header nav {
     position: fixed;
-    top: -100%;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    top: -2000px;
+    left: -9px;
+    width: 106%;
+    height: 100vh;
     background-color: #3B3B3B;
     -webkit-transition: .5s;
     transition: .5s;
@@ -574,8 +604,8 @@ img {
 
 .header nav .member .account {
   display: none;
-  -ms-grid-columns: 49% 50%;
-      grid-template-columns: 49% 50%;
+  -ms-grid-columns: 60% 39%;
+      grid-template-columns: 60% 39%;
   grid-column-gap: 1%;
   width: 50%;
   position: relative;
@@ -675,7 +705,7 @@ img {
   transition: max-height .5s;
 }
 
-.header nav .member .account .login {
+.header nav .member .account.login {
   display: -ms-grid;
   display: grid;
 }
@@ -1102,6 +1132,18 @@ img {
   .aside .aside-nav .button-social .facebook button, .aside .aside-nav .button-social .line button {
     width: 100%;
     cursor: pointer;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .aside .aside-nav .button-social .facebook button img, .aside .aside-nav .button-social .line button img {
+    margin-right: 3px;
   }
   .aside .aside-nav .button-social .facebook button {
     color: #3B5B95;

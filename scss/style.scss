@@ -251,18 +251,38 @@ img{
     justify-content: space-between;
     position: fixed;
     top: 0;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     width: 100%;
     z-index: 8;
     background-color: $dark-gray;
 
+    max-width: 95%;
+    margin: auto;
+
+    @media screen and (min-width:$md){
+      max-width: 90%;
+    }
+    @media screen and (min-width:$lg){
+      max-width: 1024px;
+      margin: 0 4em;
+    }
+    @media screen and (min-width:$xl){
+      max-width: 1280px;
+      margin: auto;
+    }
+    @media screen and (min-width:$xxl){
+      max-width: 1536px;
+    }
+    
+
   nav{
     @media screen and (max-width:($lg)-1px){
       position: fixed;
-      top: -100%;
-      left: 0;
-      width: 100%;
-      height: 100%;
+      top: -2000px;
+      left: -9px;
+      width: 106%;
+      height: 100vh;
       background-color: $dark-gray;
       transition: .5s;
       z-index: 11;
@@ -437,7 +457,7 @@ img{
 
       .account{
         display: none;
-        grid-template-columns: 49% 50%;
+        grid-template-columns: 60% 39%;
         grid-column-gap: 1%;
         width: 50%;
         position: relative;
@@ -513,7 +533,7 @@ img{
           }
         }
 
-        .login{
+        &.login{
           display: grid;
         }
       }
@@ -873,6 +893,13 @@ img{
           button{
             width: 100%;
             cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img{
+              margin-right: 3px;
+            }
           }
         }
         .facebook{

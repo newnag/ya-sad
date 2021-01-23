@@ -53,6 +53,12 @@
   text-align: end;
 }
 
+@media screen and (min-width: 1280px) {
+  .main-content .content .head-slide .swiper-wrapper .swiper-slide .box-slider {
+    width: 45%;
+  }
+}
+
 .main-content .content .head-slide .swiper-wrapper .swiper-slide .box-slider h2 {
   margin: .5em 0;
   color: #FF9B21;
@@ -266,10 +272,13 @@
 
 .main-content .content .article .grid-article .box .detail {
   position: absolute;
-  right: 5px;
+  right: 0;
+  padding-right: 5px;
   top: 0;
   width: 75%;
+  height: 100%;
   text-align: end;
+  background: #ffffff3b;
 }
 
 .main-content .content .article .grid-article .box .detail h2 {
