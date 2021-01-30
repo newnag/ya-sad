@@ -220,6 +220,33 @@
   color: #FF9B21;
 }
 
+.main-content .cart .address-zone .address-text .name, .main-content .cart .address-zone .address-text .tel, .main-content .cart .address-zone .address-text .address, .main-content .cart .address-zone .address-text .button {
+  margin-bottom: 1em;
+}
+
+.main-content .cart .address-zone .address-text .button {
+  text-align: right;
+}
+
+.main-content .cart .address-zone .address-text .button button {
+  color: #FFF;
+  background-color: #FF9B21;
+  border: 1px solid #FF9B21;
+  padding: 5px 10px;
+  cursor: pointer;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+@media (hover: hover) {
+  .main-content .cart .address-zone .address-text .button button:hover {
+    color: #FF9B21;
+    background-color: inherit;
+    -webkit-transition: .2s;
+    transition: .2s;
+  }
+}
+
 .main-content .cart .summary {
   margin-top: 1em;
 }

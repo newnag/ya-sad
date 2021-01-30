@@ -18,6 +18,10 @@
 
   .category{
     margin: 2em 0;
+
+    @media screen and (min-width:$xl){
+      min-height: 730px;
+    }
   
     .title{
       margin-bottom: 1em;
@@ -49,6 +53,9 @@
           padding: 5px;
           cursor: pointer;
           width: 130px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
 
           img{
             width: 10px;
@@ -118,6 +125,7 @@
       align-items: center;
       justify-content: center;
       margin-top: 2em;
+      flex-wrap: wrap;
 
       li{
         margin-right: 1em;

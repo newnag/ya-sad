@@ -31,6 +31,12 @@
   margin: 2em 0;
 }
 
+@media screen and (min-width: 1280px) {
+  .main-content .category {
+    min-height: 730px;
+  }
+}
+
 .main-content .category .title {
   margin-bottom: 1em;
   display: -webkit-box;
@@ -87,6 +93,15 @@
   padding: 5px;
   cursor: pointer;
   width: 130px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .main-content .category .title .filter .box-filter-show img {
@@ -161,6 +176,8 @@
       -ms-flex-pack: center;
           justify-content: center;
   margin-top: 2em;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .main-content .category .pagination li {

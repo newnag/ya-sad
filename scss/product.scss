@@ -21,7 +21,7 @@
 
     @media screen and (min-width:$md){
       display: grid;
-      grid-template-columns: 30% 65%;
+      grid-template-columns: 40% 55%;
       grid-column-gap: 5%;
       grid-row-gap: 2em;
     }
@@ -44,13 +44,14 @@
         grid-template-areas: 'thumb big';
       }
       @media screen and (min-width:$md){
-        height: 240px;
+        height: 315px;
       }
       @media screen and (min-width:$lg){
         height: 300px;
       }
       @media screen and (min-width:$xl){
         height: 100%;
+        position: relative;
       }
 
       .big-pic{
@@ -67,29 +68,62 @@
           cursor: pointer;
 
           @media screen and (min-width:$md){
-            height: 240px;
+            height: 315px;
           }
           @media screen and (min-width:$lg){
             height: 300px;
           }
           @media screen and (min-width:$xl){
-            height: 100%;
+            height: 368px;
+          }
+          @media screen and (min-width:$xxl){
+            height: 408px;
           }
         }
       }
 
       .thumb-pic{
         display: grid;
-        grid-template-columns: repeat(5,1fr);
-        grid-column-gap: 1em;
+        grid-template-columns: repeat(7,20%);
+        grid-column-gap: .5em;
+        overflow-x: auto;
+        height: 80px;
+
+        &::-webkit-scrollbar {
+          width: 0px;
+        }
 
         @media screen and (min-width:$sm){
           grid-area: thumb;
           grid-template-columns: 100%;
+          grid-column-gap: 1em;
           grid-row-gap: 1em;
+          grid-template-rows: repeat(5,1fr);
+          overflow-y: auto;
+          height: 315px;
         }
         @media screen and (min-width:$md){
           grid-row-gap: 10px;
+          height: 315px;
+        }
+        @media screen and (min-width:$lg){
+          height: 300px;
+        }
+        @media screen and (min-width:$xl){
+          height: 368px;
+
+          &:after{
+            content: '>';
+            position: absolute;
+            transform: rotate(90deg);
+            font-size: 1.8em;
+            color: #00000098;
+            bottom: 0px;
+            left: 9%;
+          }
+        }
+        @media screen and (min-width:$xxl){
+          height: 408px;
         }
 
         figure{
@@ -98,9 +132,10 @@
 
           img{
             width: 100%;
+            height: 63px;
 
             @media screen and (min-width:$md){
-              height: 35px;
+              height: 50px;
             }
             @media screen and (min-width:$lg){
               height: 52px;
@@ -114,7 +149,7 @@
             position: relative;
             
             img{
-              filter: brightness(.5);
+              //filter: brightness(.5);
             }
 
             span{
@@ -172,6 +207,7 @@
           align-items: center;
           margin-right: 10px;
           padding: 3px;
+          cursor: pointer;
 
           img{
             width: 15px;
@@ -234,11 +270,21 @@
             border: 1px solid $white;
             border-radius: 5px;
             padding: 3px;
+            transition: .3s;
 
             &.active{
               background-color: $orange;
               color: $dark-gray;
               border: 1px solid $orange;
+            }
+
+            @media (hover:hover){
+              &:hover{
+                background-color: $orange;
+                color: $dark-gray;
+                border: 1px solid $orange;
+                transition: .3s;
+              }
             }
           }
         }
@@ -250,7 +296,7 @@
         margin-top: 1em;
 
         .qty{
-          width: 70px;
+          width: 80px;
         }
 
         .add-cart{
@@ -265,9 +311,13 @@
 
       .ps{
         margin-top: 1em;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
 
         .text{
           margin: .5em 0;
+          margin-right: 1em;
 
           img{
             width: 15px;
@@ -356,7 +406,11 @@
         left: 50%;
         transform: translate(-50%,-50%);
         max-width: 80%;
-        height: 80%;
+        height: 50%;
+
+        @media screen and (min-width:$md){
+          height: 80%;
+        }
     
         .big-slide{
           height: 100%;

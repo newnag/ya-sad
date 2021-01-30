@@ -1050,6 +1050,10 @@
   z-index: 1;
 }
 
+.main-content .article .grid-article .box .detail .name h2 {
+  font-weight: 400;
+}
+
 .main-content .article .grid-article .box .hover-box {
   position: absolute;
   z-index: -1;

@@ -836,6 +836,12 @@
           bottom: 5px;
           left: 5px;
           z-index: 1;
+
+          .name{
+            h2{
+              font-weight: 400;
+            }
+          }
         }
 
         .hover-box{

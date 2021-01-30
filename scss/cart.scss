@@ -182,6 +182,30 @@
         p{
           color: $orange;
         }
+
+        .name,.tel,.address,.button{
+          margin-bottom: 1em;
+        }
+        .button{
+          text-align: right;
+
+          button{
+            color: $white;
+            background-color: $orange;
+            border: 1px solid $orange;
+            padding: 5px 10px;
+            cursor: pointer;
+            transition: .2s;
+
+            @media (hover:hover){
+              &:hover{
+                color: $orange;
+                background-color: inherit;
+                transition: .2s;
+              }
+            }
+          }
+        }
       }
     }
   
