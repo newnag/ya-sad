@@ -292,6 +292,15 @@ img{
       max-width: 1536px;
     }
     
+  .logo{
+    figure{
+      img{
+        @media screen and (max-width:($sm)-1px){
+          width: 75%;
+        }
+      }
+    }
+  }
 
   nav{
     @media screen and (max-width:($lg)-1px){
@@ -700,7 +709,7 @@ img{
             z-index: 12;
             overflow: hidden;
             border-radius: 10px;
-            transition: .5s;
+            transition: .1s;
 
             li{
               color: $white;
@@ -711,8 +720,8 @@ img{
 
             &.show{
               max-width: 200px;
-              width: 150px;
-              transition: .5s;
+              width: 180px;
+              transition: .3s;
             }
           }
         }
@@ -805,7 +814,7 @@ img{
 
           @media screen and (min-width:$lg){
             margin: unset;
-            padding: .75em 0;
+            padding: .5em 0;
           }
 
           &:nth-child(3),&:nth-child(4),
@@ -821,7 +830,7 @@ img{
           }
 
           >.name-cate{
-            width: 80px;
+            width: 150px;
             display: flex;
             align-items: center;
 
@@ -848,7 +857,7 @@ img{
 
             li{
               color: $white;
-              margin: 1em 0;
+              margin: .5em 0;
               list-style-type: disc;
               margin-left: 2em;
               transition: .2s;
@@ -862,18 +871,20 @@ img{
             }
 
             &.show{
-              max-width: 200px;
-              width: 150px;
+              max-width: 300px;
+              width: max-content;
               transition: .3s;
+              padding-right: 10px;
             }
           }
 
           @media (hover:hover){
             &:hover{
               ul{
-                max-width: 200px;
-                width: 150px;
+                max-width: 300px;
+                width: max-content;
                 transition: .5s;
+                padding-right: 10px;
               }
             }
           }

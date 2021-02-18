@@ -377,6 +377,12 @@ img {
   }
 }
 
+@media screen and (max-width: 639px) {
+  .header .logo figure img {
+    width: 75%;
+  }
+}
+
 @media screen and (max-width: 1023px) {
   .header nav {
     position: fixed;
@@ -919,8 +925,8 @@ img {
     z-index: 12;
     overflow: hidden;
     border-radius: 10px;
-    -webkit-transition: .5s;
-    transition: .5s;
+    -webkit-transition: .1s;
+    transition: .1s;
   }
   .aside .aside-nav .menu .syringe ul li, .aside .aside-nav .menu .pill ul li, .aside .aside-nav .menu-animal .syringe ul li, .aside .aside-nav .menu-animal .pill ul li {
     color: #FFF;
@@ -930,9 +936,9 @@ img {
   }
   .aside .aside-nav .menu .syringe ul.show, .aside .aside-nav .menu .pill ul.show, .aside .aside-nav .menu-animal .syringe ul.show, .aside .aside-nav .menu-animal .pill ul.show {
     max-width: 200px;
-    width: 150px;
-    -webkit-transition: .5s;
-    transition: .5s;
+    width: 180px;
+    -webkit-transition: .3s;
+    transition: .3s;
   }
   .aside .aside-nav .menu-animal {
     margin: 2em 0;
@@ -1030,7 +1036,7 @@ img {
 @media screen and (min-width: 1024px) and (min-width: 1024px) {
   .aside .aside-nav .menu .syringe, .aside .aside-nav .menu .pill, .aside .aside-nav .menu-animal .syringe, .aside .aside-nav .menu-animal .pill {
     margin: unset;
-    padding: .75em 0;
+    padding: .5em 0;
   }
 }
 
@@ -1051,7 +1057,7 @@ img {
 
 @media screen and (min-width: 1024px) {
   .aside .aside-nav .menu .syringe > .name-cate, .aside .aside-nav .menu .pill > .name-cate, .aside .aside-nav .menu-animal .syringe > .name-cate, .aside .aside-nav .menu-animal .pill > .name-cate {
-    width: 80px;
+    width: 150px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1084,7 +1090,7 @@ img {
   }
   .aside .aside-nav .menu .syringe ul li, .aside .aside-nav .menu .pill ul li, .aside .aside-nav .menu-animal .syringe ul li, .aside .aside-nav .menu-animal .pill ul li {
     color: #FFF;
-    margin: 1em 0;
+    margin: .5em 0;
     list-style-type: disc;
     margin-left: 2em;
     -webkit-transition: .2s;
@@ -1102,19 +1108,25 @@ img {
 
 @media screen and (min-width: 1024px) {
   .aside .aside-nav .menu .syringe ul.show, .aside .aside-nav .menu .pill ul.show, .aside .aside-nav .menu-animal .syringe ul.show, .aside .aside-nav .menu-animal .pill ul.show {
-    max-width: 200px;
-    width: 150px;
+    max-width: 300px;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
     -webkit-transition: .3s;
     transition: .3s;
+    padding-right: 10px;
   }
 }
 
 @media screen and (min-width: 1024px) and (hover: hover) {
   .aside .aside-nav .menu .syringe:hover ul, .aside .aside-nav .menu .pill:hover ul, .aside .aside-nav .menu-animal .syringe:hover ul, .aside .aside-nav .menu-animal .pill:hover ul {
-    max-width: 200px;
-    width: 150px;
+    max-width: 300px;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
     -webkit-transition: .5s;
     transition: .5s;
+    padding-right: 10px;
   }
 }
 
