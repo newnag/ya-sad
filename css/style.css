@@ -214,12 +214,8 @@ img {
   height: 204px;
   width: 100%;
   border-radius: 10px 10px 0 0;
-}
-
-@media screen and (min-width: 768px) {
-  .grid-box .box figure img {
-    height: 215px;
-  }
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .grid-box .box .detail-zone {
@@ -1014,9 +1010,6 @@ img {
     position: fixed;
     height: 87vh;
   }
-  .aside .aside-nav .menu, .aside .aside-nav .menu-animal {
-    padding-right: 2em;
-  }
   .aside .aside-nav .menu .syringe, .aside .aside-nav .menu .pill, .aside .aside-nav .menu-animal .syringe, .aside .aside-nav .menu-animal .pill {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1057,7 +1050,7 @@ img {
 
 @media screen and (min-width: 1024px) {
   .aside .aside-nav .menu .syringe > .name-cate, .aside .aside-nav .menu .pill > .name-cate, .aside .aside-nav .menu-animal .syringe > .name-cate, .aside .aside-nav .menu-animal .pill > .name-cate {
-    width: 150px;
+    width: 180px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1077,7 +1070,7 @@ img {
     width: 0;
     position: absolute;
     top: 0;
-    left: 110%;
+    left: 103%;
     height: -webkit-max-content;
     height: -moz-max-content;
     height: max-content;
@@ -1241,6 +1234,22 @@ img {
   }
   .aside .aside-nav .button-slide-mobile {
     display: none;
+  }
+}
+
+@media screen and (min-width: 1280px) and (max-width: 1400px) {
+  .aside .aside-nav .menu-animal {
+    padding: 0;
+    margin: .5em 0;
+  }
+  .aside .aside-nav .menu-animal li {
+    padding: .5em 0;
+  }
+  .aside .aside-nav .qrcode img {
+    width: 45%;
+  }
+  .aside .aside-nav .button-social {
+    margin: .25em 0;
   }
 }
 

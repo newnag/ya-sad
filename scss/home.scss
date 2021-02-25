@@ -42,12 +42,13 @@
           }
           .box-slider{
             position: absolute;
-            right: 10px;
+            right: 0;
             top: 0;
+            border-radius: 0 10px 0 0;
             width: 70%;
             text-align: end;
             background-color: #ffffff4f;
-            padding-right: 5px;
+            padding-right: 10px;
             padding-bottom: 5px;
 
             @media screen and (min-width:$md){
@@ -268,13 +269,15 @@
               color: $black;
 
               @media screen and (min-width:$lg){
-                font-size: .7em;
+                font-size: .8em;
               }
             }
 
             button{
               margin-top: .5em;
               height: 25px;
+              background-color: $orange;
+              color: $white;
             }
           }
         }

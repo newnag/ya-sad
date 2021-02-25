@@ -160,10 +160,11 @@ img{
         height: 204px;
         width: 100%;
         border-radius: 10px 10px 0 0;
+        object-fit: cover;
 
-        @media screen and (min-width:$md){
-          height: 215px;
-        }
+        // @media screen and (min-width:$md){
+        //   height: 215px;
+        // }
       }
     }
 
@@ -802,7 +803,7 @@ img{
       height: 87vh;
 
       .menu,.menu-animal{
-        padding-right: 2em;
+        //padding-right: 2em;
 
         .syringe,.pill{
           display: flex;
@@ -830,7 +831,7 @@ img{
           }
 
           >.name-cate{
-            width: 150px;
+            width: 180px;
             display: flex;
             align-items: center;
 
@@ -847,7 +848,7 @@ img{
             width: 0;
             position: absolute;
             top: 0;
-            left: 110%;
+            left: 103%;
             height: max-content;
             background-color: $orange;
             z-index: 12;
@@ -985,6 +986,25 @@ img{
 
       .button-slide-mobile{
         display: none;
+      }
+    }
+
+    @media screen and (min-width:$xl) and (max-width:1400px){
+      .menu-animal{
+        padding:  0;
+        margin: .5em 0;
+
+        li{
+          padding: .5em 0;
+        }
+      }
+      .qrcode{
+        img{
+          width: 45%;
+        }
+      }
+      .button-social{
+        margin: .25em 0;
       }
     }
   }
